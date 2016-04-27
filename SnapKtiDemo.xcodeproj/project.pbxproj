@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18090E081CCA1C06000D95BA /* CFCityPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18090DF31CCA1C06000D95BA /* CFCityPickerVC.swift */; };
+		18090E091CCA1C06000D95BA /* CFCityPickerVCCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18090DF51CCA1C06000D95BA /* CFCityPickerVCCommon.swift */; };
+		18090E0A1CCA1C06000D95BA /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18090DF61CCA1C06000D95BA /* LocationManager.swift */; };
+		18090E0B1CCA1C06000D95BA /* CitySearchResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18090DF81CCA1C06000D95BA /* CitySearchResultVC.swift */; };
+		18090E0C1CCA1C06000D95BA /* CitySearchResultVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18090DF91CCA1C06000D95BA /* CitySearchResultVC.xib */; };
+		18090E0D1CCA1C06000D95BA /* CFCityPickerVC+Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18090DFB1CCA1C06000D95BA /* CFCityPickerVC+Main.swift */; };
+		18090E0E1CCA1C06000D95BA /* CFCityPickerVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18090DFC1CCA1C06000D95BA /* CFCityPickerVC+TableView.swift */; };
+		18090E0F1CCA1C06000D95BA /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18090DFE1CCA1C06000D95BA /* CityModel.swift */; };
+		18090E101CCA1C06000D95BA /* img.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18090E001CCA1C06000D95BA /* img.bundle */; };
+		18090E111CCA1C06000D95BA /* CFCityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18090E021CCA1C06000D95BA /* CFCityCell.swift */; };
+		18090E121CCA1C06000D95BA /* CFCityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18090E031CCA1C06000D95BA /* CFCityCell.xib */; };
+		18090E131CCA1C06000D95BA /* CityMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18090E041CCA1C06000D95BA /* CityMaskView.swift */; };
+		18090E141CCA1C06000D95BA /* CitySearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18090E051CCA1C06000D95BA /* CitySearchBar.swift */; };
+		18090E151CCA1C06000D95BA /* HeaderItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18090E061CCA1C06000D95BA /* HeaderItemView.swift */; };
+		18090E161CCA1C06000D95BA /* HeaderItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18090E071CCA1C06000D95BA /* HeaderItemView.xib */; };
+		1814ED861CACB0E600D1DA65 /* SingleTon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814ED851CACB0E600D1DA65 /* SingleTon.swift */; };
+		1814ED881CACC84300D1DA65 /* NetWorkCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814ED871CACC84300D1DA65 /* NetWorkCore.swift */; };
+		181A13601CABC98C00C8D798 /* BaseBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181A135F1CABC98C00C8D798 /* BaseBtn.swift */; };
 		1839199D1CAA105800D69792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1839199C1CAA105800D69792 /* AppDelegate.swift */; };
 		1839199F1CAA105800D69792 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1839199E1CAA105800D69792 /* ViewController.swift */; };
 		183919A21CAA105800D69792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183919A01CAA105800D69792 /* Main.storyboard */; };
@@ -14,6 +32,24 @@
 		183919A71CAA105800D69792 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183919A51CAA105800D69792 /* LaunchScreen.storyboard */; };
 		183919B21CAA105800D69792 /* SnapKtiDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183919B11CAA105800D69792 /* SnapKtiDemoTests.swift */; };
 		183919BD1CAA105800D69792 /* SnapKtiDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183919BC1CAA105800D69792 /* SnapKtiDemoUITests.swift */; };
+		184997731CCDAA8C00E4494C /* PresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184997721CCDAA8C00E4494C /* PresentViewController.swift */; };
+		184997751CCDF45E00E4494C /* CirCleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184997741CCDF45E00E4494C /* CirCleViewController.swift */; };
+		186AAB3D1CCEFAD8007E0E99 /* MainCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186AAB3C1CCEFAD8007E0E99 /* MainCommentView.swift */; };
+		186AAB421CCEFEA2007E0E99 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186AAB411CCEFEA2007E0E99 /* CommentViewController.swift */; };
+		186AAB481CCF3BE3007E0E99 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186AAB471CCF3BE3007E0E99 /* ButtonExtension.swift */; };
+		186AAB4A1CCF4215007E0E99 /* 分享.png in Resources */ = {isa = PBXBuildFile; fileRef = 186AAB491CCF4215007E0E99 /* 分享.png */; };
+		186AAB4C1CCF48EC007E0E99 /* 收藏.png in Resources */ = {isa = PBXBuildFile; fileRef = 186AAB4B1CCF48EC007E0E99 /* 收藏.png */; };
+		186AAB4E1CCF49A2007E0E99 /* 评论.png in Resources */ = {isa = PBXBuildFile; fileRef = 186AAB4D1CCF49A2007E0E99 /* 评论.png */; };
+		186AAB501CCF5141007E0E99 /* 收藏 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 186AAB4F1CCF5141007E0E99 /* 收藏 1.png */; };
+		186AAB521CCF65B7007E0E99 /* MyTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186AAB511CCF65B7007E0E99 /* MyTextView.swift */; };
+		187A32131CAE18D3000E9321 /* CirCleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187A32121CAE18D3000E9321 /* CirCleView.swift */; };
+		187A32171CAE1A60000E9321 /* third.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 187A32141CAE1A60000E9321 /* third.jpg */; };
+		187A32181CAE1A60000E9321 /* second.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 187A32151CAE1A60000E9321 /* second.jpg */; };
+		187A32191CAE1A60000E9321 /* first.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 187A32161CAE1A60000E9321 /* first.jpg */; };
+		187A321B1CAE5897000E9321 /* four.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 187A321A1CAE5897000E9321 /* four.jpg */; };
+		187A321D1CAE5A7D000E9321 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 187A321C1CAE5A7D000E9321 /* 5.jpg */; };
+		188203901CAB6C590060C5B3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882038F1CAB6C590060C5B3 /* SecondViewController.swift */; };
+		9B3A73DA8DCC367A6FCDF714 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8706101BB87F26F7E71B5D53 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +70,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18090DF31CCA1C06000D95BA /* CFCityPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFCityPickerVC.swift; sourceTree = "<group>"; };
+		18090DF51CCA1C06000D95BA /* CFCityPickerVCCommon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFCityPickerVCCommon.swift; sourceTree = "<group>"; };
+		18090DF61CCA1C06000D95BA /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		18090DF81CCA1C06000D95BA /* CitySearchResultVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitySearchResultVC.swift; sourceTree = "<group>"; };
+		18090DF91CCA1C06000D95BA /* CitySearchResultVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CitySearchResultVC.xib; sourceTree = "<group>"; };
+		18090DFB1CCA1C06000D95BA /* CFCityPickerVC+Main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CFCityPickerVC+Main.swift"; sourceTree = "<group>"; };
+		18090DFC1CCA1C06000D95BA /* CFCityPickerVC+TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CFCityPickerVC+TableView.swift"; sourceTree = "<group>"; };
+		18090DFE1CCA1C06000D95BA /* CityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		18090E001CCA1C06000D95BA /* img.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = img.bundle; sourceTree = "<group>"; };
+		18090E021CCA1C06000D95BA /* CFCityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CFCityCell.swift; sourceTree = "<group>"; };
+		18090E031CCA1C06000D95BA /* CFCityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CFCityCell.xib; sourceTree = "<group>"; };
+		18090E041CCA1C06000D95BA /* CityMaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityMaskView.swift; sourceTree = "<group>"; };
+		18090E051CCA1C06000D95BA /* CitySearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitySearchBar.swift; sourceTree = "<group>"; };
+		18090E061CCA1C06000D95BA /* HeaderItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderItemView.swift; sourceTree = "<group>"; };
+		18090E071CCA1C06000D95BA /* HeaderItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderItemView.xib; sourceTree = "<group>"; };
+		1814ED851CACB0E600D1DA65 /* SingleTon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleTon.swift; sourceTree = "<group>"; };
+		1814ED871CACC84300D1DA65 /* NetWorkCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkCore.swift; sourceTree = "<group>"; };
+		181A135F1CABC98C00C8D798 /* BaseBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBtn.swift; sourceTree = "<group>"; };
 		183919991CAA105800D69792 /* SnapKtiDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKtiDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1839199C1CAA105800D69792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1839199E1CAA105800D69792 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +101,26 @@
 		183919B81CAA105800D69792 /* SnapKtiDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapKtiDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		183919BC1CAA105800D69792 /* SnapKtiDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapKtiDemoUITests.swift; sourceTree = "<group>"; };
 		183919BE1CAA105800D69792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184997721CCDAA8C00E4494C /* PresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentViewController.swift; sourceTree = "<group>"; };
+		184997741CCDF45E00E4494C /* CirCleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirCleViewController.swift; sourceTree = "<group>"; };
+		186AAB3C1CCEFAD8007E0E99 /* MainCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCommentView.swift; sourceTree = "<group>"; };
+		186AAB411CCEFEA2007E0E99 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		186AAB471CCF3BE3007E0E99 /* ButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		186AAB491CCF4215007E0E99 /* 分享.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "分享.png"; sourceTree = "<group>"; };
+		186AAB4B1CCF48EC007E0E99 /* 收藏.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "收藏.png"; sourceTree = "<group>"; };
+		186AAB4D1CCF49A2007E0E99 /* 评论.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "评论.png"; sourceTree = "<group>"; };
+		186AAB4F1CCF5141007E0E99 /* 收藏 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "收藏 1.png"; sourceTree = "<group>"; };
+		186AAB511CCF65B7007E0E99 /* MyTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTextView.swift; sourceTree = "<group>"; };
+		187A32121CAE18D3000E9321 /* CirCleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirCleView.swift; sourceTree = "<group>"; };
+		187A32141CAE1A60000E9321 /* third.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = third.jpg; sourceTree = "<group>"; };
+		187A32151CAE1A60000E9321 /* second.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = second.jpg; sourceTree = "<group>"; };
+		187A32161CAE1A60000E9321 /* first.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = first.jpg; sourceTree = "<group>"; };
+		187A321A1CAE5897000E9321 /* four.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = four.jpg; sourceTree = "<group>"; };
+		187A321C1CAE5A7D000E9321 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		1882038F1CAB6C590060C5B3 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		4A2D0F3B9BF67EC056AEF6FB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8706101BB87F26F7E71B5D53 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD28B443495944E86FD0AB10 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B3A73DA8DCC367A6FCDF714 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +149,96 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		162742C72EA3815C13DCA732 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A2D0F3B9BF67EC056AEF6FB /* Pods.debug.xcconfig */,
+				BD28B443495944E86FD0AB10 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		18090DF21CCA1C06000D95BA /* CFCityPickerVC */ = {
+			isa = PBXGroup;
+			children = (
+				18090DF31CCA1C06000D95BA /* CFCityPickerVC.swift */,
+				18090DF41CCA1C06000D95BA /* Common */,
+				18090DF71CCA1C06000D95BA /* Controller */,
+				18090DFA1CCA1C06000D95BA /* Extendsion */,
+				18090DFD1CCA1C06000D95BA /* Model */,
+				18090DFF1CCA1C06000D95BA /* Resource */,
+				18090E011CCA1C06000D95BA /* View */,
+			);
+			name = CFCityPickerVC;
+			path = SnapKtiDemo/CFCityPickerVC;
+			sourceTree = "<group>";
+		};
+		18090DF41CCA1C06000D95BA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				18090DF51CCA1C06000D95BA /* CFCityPickerVCCommon.swift */,
+				18090DF61CCA1C06000D95BA /* LocationManager.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		18090DF71CCA1C06000D95BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				18090DF81CCA1C06000D95BA /* CitySearchResultVC.swift */,
+				18090DF91CCA1C06000D95BA /* CitySearchResultVC.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		18090DFA1CCA1C06000D95BA /* Extendsion */ = {
+			isa = PBXGroup;
+			children = (
+				18090DFB1CCA1C06000D95BA /* CFCityPickerVC+Main.swift */,
+				18090DFC1CCA1C06000D95BA /* CFCityPickerVC+TableView.swift */,
+			);
+			path = Extendsion;
+			sourceTree = "<group>";
+		};
+		18090DFD1CCA1C06000D95BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				18090DFE1CCA1C06000D95BA /* CityModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18090DFF1CCA1C06000D95BA /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				18090E001CCA1C06000D95BA /* img.bundle */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		18090E011CCA1C06000D95BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18090E021CCA1C06000D95BA /* CFCityCell.swift */,
+				18090E031CCA1C06000D95BA /* CFCityCell.xib */,
+				18090E041CCA1C06000D95BA /* CityMaskView.swift */,
+				18090E051CCA1C06000D95BA /* CitySearchBar.swift */,
+				18090E061CCA1C06000D95BA /* HeaderItemView.swift */,
+				18090E071CCA1C06000D95BA /* HeaderItemView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		183919901CAA105800D69792 = {
 			isa = PBXGroup;
 			children = (
+				18090DF21CCA1C06000D95BA /* CFCityPickerVC */,
 				1839199B1CAA105800D69792 /* SnapKtiDemo */,
 				183919B01CAA105800D69792 /* SnapKtiDemoTests */,
 				183919BB1CAA105800D69792 /* SnapKtiDemoUITests */,
 				1839199A1CAA105800D69792 /* Products */,
+				162742C72EA3815C13DCA732 /* Pods */,
+				572A55E90710FFF6F7742302 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +255,25 @@
 		1839199B1CAA105800D69792 /* SnapKtiDemo */ = {
 			isa = PBXGroup;
 			children = (
+				186AAB4F1CCF5141007E0E99 /* 收藏 1.png */,
+				186AAB4D1CCF49A2007E0E99 /* 评论.png */,
+				186AAB4B1CCF48EC007E0E99 /* 收藏.png */,
+				186AAB491CCF4215007E0E99 /* 分享.png */,
+				187A32141CAE1A60000E9321 /* third.jpg */,
+				187A32151CAE1A60000E9321 /* second.jpg */,
+				187A32161CAE1A60000E9321 /* first.jpg */,
+				187A321A1CAE5897000E9321 /* four.jpg */,
+				187A321C1CAE5A7D000E9321 /* 5.jpg */,
 				1839199C1CAA105800D69792 /* AppDelegate.swift */,
 				1839199E1CAA105800D69792 /* ViewController.swift */,
+				186AAB471CCF3BE3007E0E99 /* ButtonExtension.swift */,
+				186AAB401CCEFE5F007E0E99 /* 底部评论视图 */,
+				186AAB3F1CCEFE30007E0E99 /* 轮播图 */,
+				186AAB3E1CCEFE0E007E0E99 /* 贝塞尔曲线 */,
+				1882038F1CAB6C590060C5B3 /* SecondViewController.swift */,
+				181A135F1CABC98C00C8D798 /* BaseBtn.swift */,
+				1814ED851CACB0E600D1DA65 /* SingleTon.swift */,
+				1814ED871CACC84300D1DA65 /* NetWorkCore.swift */,
 				183919A01CAA105800D69792 /* Main.storyboard */,
 				183919A31CAA105800D69792 /* Assets.xcassets */,
 				183919A51CAA105800D69792 /* LaunchScreen.storyboard */,
@@ -125,6 +300,41 @@
 			path = SnapKtiDemoUITests;
 			sourceTree = "<group>";
 		};
+		186AAB3E1CCEFE0E007E0E99 /* 贝塞尔曲线 */ = {
+			isa = PBXGroup;
+			children = (
+				184997721CCDAA8C00E4494C /* PresentViewController.swift */,
+			);
+			name = "贝塞尔曲线";
+			sourceTree = "<group>";
+		};
+		186AAB3F1CCEFE30007E0E99 /* 轮播图 */ = {
+			isa = PBXGroup;
+			children = (
+				184997741CCDF45E00E4494C /* CirCleViewController.swift */,
+				187A32121CAE18D3000E9321 /* CirCleView.swift */,
+			);
+			name = "轮播图";
+			sourceTree = "<group>";
+		};
+		186AAB401CCEFE5F007E0E99 /* 底部评论视图 */ = {
+			isa = PBXGroup;
+			children = (
+				186AAB511CCF65B7007E0E99 /* MyTextView.swift */,
+				186AAB411CCEFEA2007E0E99 /* CommentViewController.swift */,
+				186AAB3C1CCEFAD8007E0E99 /* MainCommentView.swift */,
+			);
+			name = "底部评论视图";
+			sourceTree = "<group>";
+		};
+		572A55E90710FFF6F7742302 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8706101BB87F26F7E71B5D53 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +342,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 183919C11CAA105800D69792 /* Build configuration list for PBXNativeTarget "SnapKtiDemo" */;
 			buildPhases = (
+				F0A6EA7AC54658B13F00E2DD /* Check Pods Manifest.lock */,
 				183919951CAA105800D69792 /* Sources */,
 				183919961CAA105800D69792 /* Frameworks */,
 				183919971CAA105800D69792 /* Resources */,
+				257189C57CA7BBAF585D9754 /* Embed Pods Frameworks */,
+				B1E83B7285808F8C2228E230 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,9 +442,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186AAB4A1CCF4215007E0E99 /* 分享.png in Resources */,
+				187A32191CAE1A60000E9321 /* first.jpg in Resources */,
+				186AAB4C1CCF48EC007E0E99 /* 收藏.png in Resources */,
+				18090E101CCA1C06000D95BA /* img.bundle in Resources */,
+				186AAB501CCF5141007E0E99 /* 收藏 1.png in Resources */,
+				18090E161CCA1C06000D95BA /* HeaderItemView.xib in Resources */,
+				186AAB4E1CCF49A2007E0E99 /* 评论.png in Resources */,
+				18090E121CCA1C06000D95BA /* CFCityCell.xib in Resources */,
+				187A321D1CAE5A7D000E9321 /* 5.jpg in Resources */,
 				183919A71CAA105800D69792 /* LaunchScreen.storyboard in Resources */,
 				183919A41CAA105800D69792 /* Assets.xcassets in Resources */,
+				18090E0C1CCA1C06000D95BA /* CitySearchResultVC.xib in Resources */,
 				183919A21CAA105800D69792 /* Main.storyboard in Resources */,
+				187A32171CAE1A60000E9321 /* third.jpg in Resources */,
+				187A321B1CAE5897000E9321 /* four.jpg in Resources */,
+				187A32181CAE1A60000E9321 /* second.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +477,83 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		257189C57CA7BBAF585D9754 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B1E83B7285808F8C2228E230 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0A6EA7AC54658B13F00E2DD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		183919951CAA105800D69792 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18090E081CCA1C06000D95BA /* CFCityPickerVC.swift in Sources */,
+				186AAB521CCF65B7007E0E99 /* MyTextView.swift in Sources */,
+				188203901CAB6C590060C5B3 /* SecondViewController.swift in Sources */,
+				184997751CCDF45E00E4494C /* CirCleViewController.swift in Sources */,
+				186AAB3D1CCEFAD8007E0E99 /* MainCommentView.swift in Sources */,
+				18090E0A1CCA1C06000D95BA /* LocationManager.swift in Sources */,
+				18090E091CCA1C06000D95BA /* CFCityPickerVCCommon.swift in Sources */,
+				187A32131CAE18D3000E9321 /* CirCleView.swift in Sources */,
+				18090E0D1CCA1C06000D95BA /* CFCityPickerVC+Main.swift in Sources */,
+				18090E0F1CCA1C06000D95BA /* CityModel.swift in Sources */,
 				1839199F1CAA105800D69792 /* ViewController.swift in Sources */,
+				186AAB421CCEFEA2007E0E99 /* CommentViewController.swift in Sources */,
+				18090E151CCA1C06000D95BA /* HeaderItemView.swift in Sources */,
+				18090E0B1CCA1C06000D95BA /* CitySearchResultVC.swift in Sources */,
+				18090E141CCA1C06000D95BA /* CitySearchBar.swift in Sources */,
 				1839199D1CAA105800D69792 /* AppDelegate.swift in Sources */,
+				186AAB481CCF3BE3007E0E99 /* ButtonExtension.swift in Sources */,
+				1814ED881CACC84300D1DA65 /* NetWorkCore.swift in Sources */,
+				1814ED861CACB0E600D1DA65 /* SingleTon.swift in Sources */,
+				184997731CCDAA8C00E4494C /* PresentViewController.swift in Sources */,
+				18090E111CCA1C06000D95BA /* CFCityCell.swift in Sources */,
+				18090E131CCA1C06000D95BA /* CityMaskView.swift in Sources */,
+				18090E0E1CCA1C06000D95BA /* CFCityPickerVC+TableView.swift in Sources */,
+				181A13601CABC98C00C8D798 /* BaseBtn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,9 +691,11 @@
 		};
 		183919C21CAA105800D69792 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A2D0F3B9BF67EC056AEF6FB /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SnapKtiDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lihuan.SnapKtiDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -406,9 +704,11 @@
 		};
 		183919C31CAA105800D69792 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD28B443495944E86FD0AB10 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SnapKtiDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lihuan.SnapKtiDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -482,6 +782,7 @@
 				183919C31CAA105800D69792 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		183919C41CAA105800D69792 /* Build configuration list for PBXNativeTarget "SnapKtiDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +791,7 @@
 				183919C61CAA105800D69792 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		183919C71CAA105800D69792 /* Build configuration list for PBXNativeTarget "SnapKtiDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +800,7 @@
 				183919C91CAA105800D69792 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
