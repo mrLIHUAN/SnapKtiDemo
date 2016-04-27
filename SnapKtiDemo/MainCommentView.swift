@@ -30,17 +30,6 @@ import UIKit
     optional func mainTextFieldWithString(string : String )
 
 }
-
-enum MainBtnstye {
-    case comment
-    case share
-    case shoucang
-
-}
-
-
-
-
 class MainCommentView: UIView , UITextViewDelegate{
     
     var width = UIScreen.mainScreen().bounds.width

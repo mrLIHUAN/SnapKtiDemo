@@ -266,7 +266,6 @@
 				187A321C1CAE5A7D000E9321 /* 5.jpg */,
 				1839199C1CAA105800D69792 /* AppDelegate.swift */,
 				1839199E1CAA105800D69792 /* ViewController.swift */,
-				186AAB471CCF3BE3007E0E99 /* ButtonExtension.swift */,
 				186AAB401CCEFE5F007E0E99 /* 底部评论视图 */,
 				186AAB3F1CCEFE30007E0E99 /* 轮播图 */,
 				186AAB3E1CCEFE0E007E0E99 /* 贝塞尔曲线 */,
@@ -320,6 +319,7 @@
 		186AAB401CCEFE5F007E0E99 /* 底部评论视图 */ = {
 			isa = PBXGroup;
 			children = (
+				186AAB471CCF3BE3007E0E99 /* ButtonExtension.swift */,
 				186AAB511CCF65B7007E0E99 /* MyTextView.swift */,
 				186AAB411CCEFEA2007E0E99 /* CommentViewController.swift */,
 				186AAB3C1CCEFAD8007E0E99 /* MainCommentView.swift */,

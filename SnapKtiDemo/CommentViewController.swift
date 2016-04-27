@@ -70,9 +70,7 @@ class CommentViewController: UIViewController,MainCommentBtndelegate{
             self.bottomView.transform = CGAffineTransformMakeTranslation(0, -endY!)
         })
     }
-    
     func keyboardwillhidden(noti:NSNotification){
-        
         UIView.animateWithDuration(0.25) { () -> Void in
             self.bottomView.transform = CGAffineTransformIdentity
         }
