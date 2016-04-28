@@ -25,6 +25,7 @@
 		1814ED861CACB0E600D1DA65 /* SingleTon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814ED851CACB0E600D1DA65 /* SingleTon.swift */; };
 		1814ED881CACC84300D1DA65 /* NetWorkCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814ED871CACC84300D1DA65 /* NetWorkCore.swift */; };
 		181A13601CABC98C00C8D798 /* BaseBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181A135F1CABC98C00C8D798 /* BaseBtn.swift */; };
+		182A52831CD0C0D600A27366 /* RYCuteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182A52821CD0C0D600A27366 /* RYCuteView.swift */; };
 		1839199D1CAA105800D69792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1839199C1CAA105800D69792 /* AppDelegate.swift */; };
 		1839199F1CAA105800D69792 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1839199E1CAA105800D69792 /* ViewController.swift */; };
 		183919A21CAA105800D69792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183919A01CAA105800D69792 /* Main.storyboard */; };
@@ -88,6 +89,7 @@
 		1814ED851CACB0E600D1DA65 /* SingleTon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleTon.swift; sourceTree = "<group>"; };
 		1814ED871CACC84300D1DA65 /* NetWorkCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkCore.swift; sourceTree = "<group>"; };
 		181A135F1CABC98C00C8D798 /* BaseBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBtn.swift; sourceTree = "<group>"; };
+		182A52821CD0C0D600A27366 /* RYCuteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYCuteView.swift; sourceTree = "<group>"; };
 		183919991CAA105800D69792 /* SnapKtiDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKtiDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1839199C1CAA105800D69792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1839199E1CAA105800D69792 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				184997721CCDAA8C00E4494C /* PresentViewController.swift */,
+				182A52821CD0C0D600A27366 /* RYCuteView.swift */,
 			);
 			name = "贝塞尔曲线";
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				1814ED881CACC84300D1DA65 /* NetWorkCore.swift in Sources */,
 				1814ED861CACB0E600D1DA65 /* SingleTon.swift in Sources */,
 				184997731CCDAA8C00E4494C /* PresentViewController.swift in Sources */,
+				182A52831CD0C0D600A27366 /* RYCuteView.swift in Sources */,
 				18090E111CCA1C06000D95BA /* CFCityCell.swift in Sources */,
 				18090E131CCA1C06000D95BA /* CityMaskView.swift in Sources */,
 				18090E0E1CCA1C06000D95BA /* CFCityPickerVC+TableView.swift in Sources */,

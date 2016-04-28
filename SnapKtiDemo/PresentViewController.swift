@@ -23,6 +23,14 @@ class PresentViewController: UIViewController {
         bezierDrawCircle()
         
         bezierDrawCurves()
+        
+
+        let view1 = RYCuteView(frame: CGRectMake(0,0 , self.view.frame.size.width, 600))
+        view1.backgroundColor = UIColor.whiteColor()
+        self.view .addSubview(view1)
+        
+        
+        
 //        self.navigationController?.navigationBar.tintColor = UIColor.redColor()
 //        self.navigationController?.navigationBar.translucent = false
         // Do any additional setup after loading the view.
