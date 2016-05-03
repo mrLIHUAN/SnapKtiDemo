@@ -50,6 +50,7 @@
 		187A321B1CAE5897000E9321 /* four.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 187A321A1CAE5897000E9321 /* four.jpg */; };
 		187A321D1CAE5A7D000E9321 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 187A321C1CAE5A7D000E9321 /* 5.jpg */; };
 		188203901CAB6C590060C5B3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882038F1CAB6C590060C5B3 /* SecondViewController.swift */; };
+		18DDAA4F1CD303DD0004D2DE /* RefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDAA4E1CD303DD0004D2DE /* RefreshViewController.swift */; };
 		9B3A73DA8DCC367A6FCDF714 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8706101BB87F26F7E71B5D53 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +121,7 @@
 		187A321A1CAE5897000E9321 /* four.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = four.jpg; sourceTree = "<group>"; };
 		187A321C1CAE5A7D000E9321 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		1882038F1CAB6C590060C5B3 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		18DDAA4E1CD303DD0004D2DE /* RefreshViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshViewController.swift; sourceTree = "<group>"; };
 		4A2D0F3B9BF67EC056AEF6FB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8706101BB87F26F7E71B5D53 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD28B443495944E86FD0AB10 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				1839199E1CAA105800D69792 /* ViewController.swift */,
 				186AAB401CCEFE5F007E0E99 /* 底部评论视图 */,
 				186AAB3F1CCEFE30007E0E99 /* 轮播图 */,
+				18DDAA4D1CD3038E0004D2DE /* 不一样的下拉刷新 */,
 				186AAB3E1CCEFE0E007E0E99 /* 贝塞尔曲线 */,
 				1882038F1CAB6C590060C5B3 /* SecondViewController.swift */,
 				181A135F1CABC98C00C8D798 /* BaseBtn.swift */,
@@ -328,6 +331,14 @@
 				186AAB3C1CCEFAD8007E0E99 /* MainCommentView.swift */,
 			);
 			name = "底部评论视图";
+			sourceTree = "<group>";
+		};
+		18DDAA4D1CD3038E0004D2DE /* 不一样的下拉刷新 */ = {
+			isa = PBXGroup;
+			children = (
+				18DDAA4E1CD303DD0004D2DE /* RefreshViewController.swift */,
+			);
+			name = "不一样的下拉刷新";
 			sourceTree = "<group>";
 		};
 		572A55E90710FFF6F7742302 /* Frameworks */ = {
@@ -555,6 +566,7 @@
 				184997731CCDAA8C00E4494C /* PresentViewController.swift in Sources */,
 				182A52831CD0C0D600A27366 /* RYCuteView.swift in Sources */,
 				18090E111CCA1C06000D95BA /* CFCityCell.swift in Sources */,
+				18DDAA4F1CD303DD0004D2DE /* RefreshViewController.swift in Sources */,
 				18090E131CCA1C06000D95BA /* CityMaskView.swift in Sources */,
 				18090E0E1CCA1C06000D95BA /* CFCityPickerVC+TableView.swift in Sources */,
 				181A13601CABC98C00C8D798 /* BaseBtn.swift in Sources */,

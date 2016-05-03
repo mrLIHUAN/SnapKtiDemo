@@ -11,7 +11,7 @@ import UIKit
 let SYS_DEVICE_WIDTH = UIScreen.mainScreen().bounds.size.width //屏幕宽度
 let SYS_DEVICE_HEIGHT = UIScreen.mainScreen().bounds.size.height //屏幕高度
 
-let MIN_HEIGHT : CGFloat = 200 //图形最小的高度
+let MIN_HEIGHT : CGFloat = 20 //图形最小的高度
 
 
 
@@ -37,8 +37,7 @@ class RYCuteView: UIView {
         //监听小红点的X坐标和Y坐标
         self.addObserver(self, forKeyPath: "curveX", options: NSKeyValueObservingOptions.New, context: nil)
         self.addObserver(self, forKeyPath: "curveY" as String, options: NSKeyValueObservingOptions.New, context: nil)
-        
-        //
+        // 横
         configShapeLayer()
         //创建小红点
         configCurveView()
@@ -78,9 +77,6 @@ class RYCuteView: UIView {
         disPlayLink = CADisplayLink(target: self, selector: "calculatePath")
         disPlayLink.addToRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
         disPlayLink.paused = true
-        
-        
-        
     }
     
     
@@ -94,7 +90,7 @@ class RYCuteView: UIView {
                 mHeight = point.y * 0.7 + MIN_HEIGHT
                 curveX = SYS_DEVICE_WIDTH / 2.0 + point.x
                 
-                print("\(point.y)")
+                print("++++\(point.y)")
                 
                 curveY = mHeight > MIN_HEIGHT ? mHeight : MIN_HEIGHT
                 
@@ -106,11 +102,8 @@ class RYCuteView: UIView {
                 disPlayLink.paused = false
                 
                 UIView .animateWithDuration(1, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: { [weak self]() -> Void in
-                    
                     //小红点是一个View,所以在闭包中有弹簧的效果，然后根据他的动效路径，在calculatePath中计算弹性图形的形状
-                    
                     self!.curveView.frame = CGRectMake(SYS_DEVICE_WIDTH/2.0, MIN_HEIGHT, 3, 3)
-                    
                     }, completion: { [weak self](finished : Bool) -> Void in
                         if finished {
                             self!.disPlayLink.paused = true
@@ -142,6 +135,8 @@ class RYCuteView: UIView {
         self.layer.addSublayer(shapeLayer)
     
     }
+    
+    
     
     func configCurveView(){
         curveX = SYS_DEVICE_WIDTH / 2.0

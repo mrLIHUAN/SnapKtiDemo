@@ -24,7 +24,6 @@ extension UIButton{
         
         let imgWidth = self.imageView?.image?.size.width
         let imgHeight = self.imageView?.image?.size.height
-        
         let textSize = NSString(string: (self.titleLabel?.text)!).sizeWithAttributes([NSFontAttributeName : (self.titleLabel?.font)!])
         
         let textHeight = textSize.height
@@ -39,7 +38,6 @@ extension UIButton{
 //        self.imageView?.backgroundColor = UIColor.blueColor()
         
         self.imageView?.snp_makeConstraints(closure: { (make) -> Void in
-            
             make.centerY.equalTo(self.snp_centerY).offset(-(textHeight+imgTextDistance)/2)
             make.centerX.equalTo(self.snp_centerX)
             make.width.equalTo(imgWidth!)
@@ -54,6 +52,40 @@ extension UIButton{
         self.titleEdgeInsets = UIEdgeInsetsMake(titleOffsetY, titleOffsetX, 0, 0)
     
     }
+    
+    /**
+    设置图片和标题垂直放置 标题在上
+    必须设定：标题
+    图片 非背景图，图片必须以UIImage(named: )方式设定 否则将找不到
+    图片大小与真实比例相同，非压缩 若图片太大则不可以
+    
+    - parameter imgTextDistance: 图片和文字的间距
+    */
+
+    func setVerticalLabelTop(imgTextDistance:CGFloat){
+        
+        let imgWidth = self.imageView?.image?.size.width
+        let imgHeight = self.imageView?.image?.size.height
+        let textSize = NSString(string: (self.titleLabel?.text)!).sizeWithAttributes([NSFontAttributeName : (self.titleLabel?.font)!])
+        
+        let textHeight = textSize.height
+        var interval : CGFloat!
+        var titleOffsetX : CGFloat!
+        var titleOffsetY : CGFloat!
+        
+        self.imageView?.snp_makeConstraints(closure: { (make) -> Void in
+            make.centerY.equalTo(self.snp_centerY).offset((textHeight + imgTextDistance) / 2)
+            make.centerX.equalTo(self.snp_centerX).offset(0)
+            make.width.equalTo(imgWidth!)
+            make.height.equalTo(imgHeight!)
+        })
+        
+        interval = CGFloat(-imgHeight!) - CGFloat(imgTextDistance)
+        titleOffsetX = CGFloat(-imgWidth!)
+        titleOffsetY = interval
+        self.titleEdgeInsets = UIEdgeInsetsMake(titleOffsetY, titleOffsetX, 0, 0)
+    }
+    
     
     
 }

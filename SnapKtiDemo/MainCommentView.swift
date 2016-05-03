@@ -47,9 +47,7 @@ class MainCommentView: UIView , UITextViewDelegate{
     
     /**懒加载*/
     lazy var lastBtn : UIButton = {
-    
       return UIButton()
-    
     }()
     
     /**收藏btn*/
@@ -57,10 +55,8 @@ class MainCommentView: UIView , UITextViewDelegate{
         return UIButton()
     
     }()
-    
     /** 评论的内容*/
     var commentText : String!
-    
     
     /**这个属性判断这个页面是否已经被收藏，如果有收藏功能可以设置0:代表没有收藏 1：已经收藏
         如果你写的工程没有牵扯到收藏次属性不需要赋值*/
@@ -70,7 +66,6 @@ class MainCommentView: UIView , UITextViewDelegate{
                 shoucangBtn.setImage(UIImage(named: "收藏"), forState: UIControlState.Normal)
             }else{
                 shoucangBtn.setImage(UIImage(named: "收藏 1"), forState: UIControlState.Normal)
-            
             }
         
         
@@ -119,16 +114,12 @@ class MainCommentView: UIView , UITextViewDelegate{
             if btnNames[i] == "收藏" {
                 
                 shoucangBtn = btn
-                
             }
         }
         
         
         textWidth = CGFloat(screenWidth)-CGFloat(btnCount * 30 + (btnCount + 2) * 10)
-        
         /** 写评论*/
-        
-
         textField.placeholder = "写评论"
         textField.returnKeyType = UIReturnKeyType.Done
         textField.font = UIFont.systemFontOfSize(15)
@@ -154,14 +145,9 @@ class MainCommentView: UIView , UITextViewDelegate{
         
         commentText = text
         
-        
-        
     }
     
     func textViewDidChange(textView: UITextView) {
-        
-        
-        
         //高度
         let textSize = NSString(string: textView.text).sizeWithAttributes([NSFontAttributeName : textView.font!])
         if textSize.width >= textWidth {
@@ -181,6 +167,7 @@ class MainCommentView: UIView , UITextViewDelegate{
         }
     }
     
+    
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
     
         let textString : NSString = text as NSString
@@ -188,17 +175,12 @@ class MainCommentView: UIView , UITextViewDelegate{
         if textString .isEqualToString("\n"){
             
         textView.resignFirstResponder()
-            
             return false
         }
-        
        return true
     }
     
-
-    
     func onClick(btn : UIButton){
-        
         textField.resignFirstResponder()
         if btn == shoucangBtn{
             if collectionState == "0" {
@@ -207,20 +189,10 @@ class MainCommentView: UIView , UITextViewDelegate{
                 collectionState = "0"
             }
         }
-        
-        
-        
         if commentText == nil{
-            
             commentText = ""
-            
         }
-        
-        
         del.mainCommentBtn!(btn.tag - 1000, commentText: commentText, isShoucang: collectionState)
-        
-        
-        
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

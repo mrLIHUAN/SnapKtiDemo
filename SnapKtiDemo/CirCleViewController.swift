@@ -12,6 +12,9 @@ class CirCleViewController: UIViewController,CirCleViewDelegate{
 
     
     var circleView: CirCleView!
+    
+    var index : Int!
+    
 
     override func viewWillAppear(animated: Bool) {
         

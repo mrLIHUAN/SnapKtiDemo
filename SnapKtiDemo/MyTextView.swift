@@ -32,19 +32,15 @@ class MyTextView: UITextView {
 
     func textChanged(notification:NSNotification){
         if(self.placeholder.characters.count == 0){
-        
             return
         }
         
         if(self.text.characters.count == 0){
-        
             self.viewWithTag(8732)?.alpha = 0.5;
         }else{
-        
             self.viewWithTag(8732)?.alpha = 0;
         }
     }
-    
     
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)

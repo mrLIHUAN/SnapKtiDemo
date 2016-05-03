@@ -44,7 +44,7 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
 //        self.navigationController?.navigationBar.translucent = false
         
         
-        names = ["贝塞尔曲线","轮播图","底部评论视图"];
+        names = ["贝塞尔曲线","轮播图","底部评论视图","不一样的下拉刷新"];
         
         
 //        let btn = UIButton()
@@ -210,6 +210,7 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
         
         let vc = CirCleViewController()
         vc.title = "轮播图"
+        vc.index = 1
         self.navigationController?.pushViewController(vc, animated: true)
         
     
@@ -218,6 +219,13 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
     func bottomView(){
         let vc = CommentViewController()
         vc.title = "底部评论视图"
+        self.navigationController?.pushViewController(vc, animated: true)
+    
+    }
+    /**不一样的下拉刷新*/
+    func refreshViewcontroller(){
+        let vc = RefreshViewController()
+        vc.title = "动画刷新"
         self.navigationController?.pushViewController(vc, animated: true)
     
     }
@@ -267,6 +275,7 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
             break
         case 2 : bottomView()
             break
+        case 3 : refreshViewcontroller()
         default :break
         
         }

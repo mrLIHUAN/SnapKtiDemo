@@ -30,7 +30,7 @@ class CommentViewController: UIViewController,MainCommentBtndelegate{
         btn3.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         btn3.setImage(UIImage(named: "分享"), forState: UIControlState.Normal)
         btn3.setVerticalLabelBottom(5)
-        btn3.addTarget(self, action: "onClick:", forControlEvents: UIControlEvents.TouchUpInside)
+//        btn3.addTarget(self, action: "onClick:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(btn3)
 //        btn3.snp_makeConstraints { (make) -> Void in
 //            make.right.equalTo(-)
@@ -38,21 +38,12 @@ class CommentViewController: UIViewController,MainCommentBtndelegate{
 //            make.top.equalTo()
 //            make.width.equalTo(30)
 //        }
-
         
-        
-        
-        
-        
-
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillChange:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardwillhidden:", name: UIKeyboardWillHideNotification, object: nil)
-        
         self.view.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
         creatBottomView()
-        
-        
     }
 
     
@@ -76,25 +67,17 @@ class CommentViewController: UIViewController,MainCommentBtndelegate{
         }
     }
 
-    
-    
-
      func creatBottomView(){
-    
-        bottomView = MainCommentView(frame: CGRectZero, btnNames: ["分享","收藏","评论"])
+        bottomView = MainCommentView(frame: CGRectZero , btnNames: ["分享","收藏","评论"])
         bottomView.del = self
-
         /**如果没有收藏属性的话 此属性可选属性*/
 //        bottomView.collectionState = "1"
         self.view .addSubview(bottomView)
-    
             bottomView.snp_makeConstraints { (make) -> Void in
                 make.left.equalTo(0)
                 make.right.equalTo(0)
                 make.height.equalTo(55)
                 make.bottom.equalTo(self.view.snp_bottom)
-    
-                
             }
     }
 
@@ -104,7 +87,6 @@ class CommentViewController: UIViewController,MainCommentBtndelegate{
     }
     
    
-    
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     

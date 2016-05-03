@@ -26,7 +26,6 @@ class PresentViewController: UIViewController {
         
 
         let view1 = RYCuteView(frame: CGRectMake(0,0 , self.view.frame.size.width, 600))
-        view1.backgroundColor = UIColor.whiteColor()
         self.view .addSubview(view1)
         
         
