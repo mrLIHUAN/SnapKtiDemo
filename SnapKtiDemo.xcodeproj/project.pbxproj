@@ -26,6 +26,9 @@
 		1814ED881CACC84300D1DA65 /* NetWorkCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1814ED871CACC84300D1DA65 /* NetWorkCore.swift */; };
 		181A13601CABC98C00C8D798 /* BaseBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181A135F1CABC98C00C8D798 /* BaseBtn.swift */; };
 		182A52831CD0C0D600A27366 /* RYCuteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182A52821CD0C0D600A27366 /* RYCuteView.swift */; };
+		1837445A1CDADCF400CFD8E5 /* MyButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183744591CDADCF400CFD8E5 /* MyButtonExtension.swift */; };
+		1837445F1CDB3CB100CFD8E5 /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1837445E1CDB3CB100CFD8E5 /* KeyboardViewController.swift */; };
+		183744611CDB3DE100CFD8E5 /* PasswordAndkeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183744601CDB3DE100CFD8E5 /* PasswordAndkeyBoard.swift */; };
 		1839199D1CAA105800D69792 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1839199C1CAA105800D69792 /* AppDelegate.swift */; };
 		1839199F1CAA105800D69792 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1839199E1CAA105800D69792 /* ViewController.swift */; };
 		183919A21CAA105800D69792 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183919A01CAA105800D69792 /* Main.storyboard */; };
@@ -50,6 +53,7 @@
 		187A321B1CAE5897000E9321 /* four.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 187A321A1CAE5897000E9321 /* four.jpg */; };
 		187A321D1CAE5A7D000E9321 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 187A321C1CAE5A7D000E9321 /* 5.jpg */; };
 		188203901CAB6C590060C5B3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882038F1CAB6C590060C5B3 /* SecondViewController.swift */; };
+		18CD1D781CDC84C90002A218 /* DownLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD1D771CDC84C90002A218 /* DownLoadViewController.swift */; };
 		18D45A891CD98D9D008C5C2D /* UIButton+touch.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D45A881CD98D9D008C5C2D /* UIButton+touch.m */; };
 		18DDAA4F1CD303DD0004D2DE /* RefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDAA4E1CD303DD0004D2DE /* RefreshViewController.swift */; };
 		9B3A73DA8DCC367A6FCDF714 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8706101BB87F26F7E71B5D53 /* Pods.framework */; };
@@ -92,6 +96,9 @@
 		1814ED871CACC84300D1DA65 /* NetWorkCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkCore.swift; sourceTree = "<group>"; };
 		181A135F1CABC98C00C8D798 /* BaseBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseBtn.swift; sourceTree = "<group>"; };
 		182A52821CD0C0D600A27366 /* RYCuteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RYCuteView.swift; sourceTree = "<group>"; };
+		183744591CDADCF400CFD8E5 /* MyButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyButtonExtension.swift; sourceTree = "<group>"; };
+		1837445E1CDB3CB100CFD8E5 /* KeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		183744601CDB3DE100CFD8E5 /* PasswordAndkeyBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordAndkeyBoard.swift; sourceTree = "<group>"; };
 		183919991CAA105800D69792 /* SnapKtiDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapKtiDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1839199C1CAA105800D69792 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1839199E1CAA105800D69792 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +129,7 @@
 		187A321A1CAE5897000E9321 /* four.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = four.jpg; sourceTree = "<group>"; };
 		187A321C1CAE5A7D000E9321 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		1882038F1CAB6C590060C5B3 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		18CD1D771CDC84C90002A218 /* DownLoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownLoadViewController.swift; sourceTree = "<group>"; };
 		18D45A861CD98D9C008C5C2D /* SnapKtiDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnapKtiDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		18D45A871CD98D9D008C5C2D /* UIButton+touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+touch.h"; sourceTree = "<group>"; };
 		18D45A881CD98D9D008C5C2D /* UIButton+touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+touch.m"; sourceTree = "<group>"; };
@@ -237,6 +245,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		1837445D1CDB3BDE00CFD8E5 /* 密码框数字键盘 */ = {
+			isa = PBXGroup;
+			children = (
+				1837445E1CDB3CB100CFD8E5 /* KeyboardViewController.swift */,
+				183744601CDB3DE100CFD8E5 /* PasswordAndkeyBoard.swift */,
+			);
+			name = "密码框数字键盘";
+			sourceTree = "<group>";
+		};
 		183919901CAA105800D69792 = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +296,8 @@
 				186AAB401CCEFE5F007E0E99 /* 底部评论视图 */,
 				186AAB3F1CCEFE30007E0E99 /* 轮播图 */,
 				18DDAA4D1CD3038E0004D2DE /* 不一样的下拉刷新 */,
+				1837445D1CDB3BDE00CFD8E5 /* 密码框数字键盘 */,
+				18CD1D791CDC84DC0002A218 /* 文件下载 */,
 				186AAB3E1CCEFE0E007E0E99 /* 贝塞尔曲线 */,
 				1882038F1CAB6C590060C5B3 /* SecondViewController.swift */,
 				181A135F1CABC98C00C8D798 /* BaseBtn.swift */,
@@ -333,11 +352,20 @@
 			isa = PBXGroup;
 			children = (
 				186AAB471CCF3BE3007E0E99 /* ButtonExtension.swift */,
+				183744591CDADCF400CFD8E5 /* MyButtonExtension.swift */,
 				186AAB511CCF65B7007E0E99 /* MyTextView.swift */,
 				186AAB411CCEFEA2007E0E99 /* CommentViewController.swift */,
 				186AAB3C1CCEFAD8007E0E99 /* MainCommentView.swift */,
 			);
 			name = "底部评论视图";
+			sourceTree = "<group>";
+		};
+		18CD1D791CDC84DC0002A218 /* 文件下载 */ = {
+			isa = PBXGroup;
+			children = (
+				18CD1D771CDC84C90002A218 /* DownLoadViewController.swift */,
+			);
+			name = "文件下载";
 			sourceTree = "<group>";
 		};
 		18DDAA4D1CD3038E0004D2DE /* 不一样的下拉刷新 */ = {
@@ -564,6 +592,8 @@
 				1839199F1CAA105800D69792 /* ViewController.swift in Sources */,
 				186AAB421CCEFEA2007E0E99 /* CommentViewController.swift in Sources */,
 				18090E151CCA1C06000D95BA /* HeaderItemView.swift in Sources */,
+				183744611CDB3DE100CFD8E5 /* PasswordAndkeyBoard.swift in Sources */,
+				18CD1D781CDC84C90002A218 /* DownLoadViewController.swift in Sources */,
 				18090E0B1CCA1C06000D95BA /* CitySearchResultVC.swift in Sources */,
 				18090E141CCA1C06000D95BA /* CitySearchBar.swift in Sources */,
 				1839199D1CAA105800D69792 /* AppDelegate.swift in Sources */,
@@ -571,7 +601,9 @@
 				1814ED881CACC84300D1DA65 /* NetWorkCore.swift in Sources */,
 				1814ED861CACB0E600D1DA65 /* SingleTon.swift in Sources */,
 				184997731CCDAA8C00E4494C /* PresentViewController.swift in Sources */,
+				1837445F1CDB3CB100CFD8E5 /* KeyboardViewController.swift in Sources */,
 				18D45A891CD98D9D008C5C2D /* UIButton+touch.m in Sources */,
+				1837445A1CDADCF400CFD8E5 /* MyButtonExtension.swift in Sources */,
 				182A52831CD0C0D600A27366 /* RYCuteView.swift in Sources */,
 				18090E111CCA1C06000D95BA /* CFCityCell.swift in Sources */,
 				18DDAA4F1CD303DD0004D2DE /* RefreshViewController.swift in Sources */,

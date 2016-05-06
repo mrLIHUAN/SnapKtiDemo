@@ -44,7 +44,7 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
 //        self.navigationController?.navigationBar.translucent = false
         
         
-        names = ["贝塞尔曲线","轮播图","底部评论视图","不一样的下拉刷新"];
+        names = ["贝塞尔曲线","轮播图","底部评论视图","不一样的下拉刷新","密码框","文件下载"];
         
         
 //        let btn = UIButton()
@@ -85,11 +85,11 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
         
         
         
-        
+//        
 //        let doc : NSString = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
 ////        let path = (d .stringByAppendingPathComponent("ShopCart.sqlite")
 //        let path = doc.stringByAppendingPathComponent("ShopCart.sqlite")
-//        
+//
 //        print("\(path)")
         
 //        kwidth = self.view.bounds.width
@@ -229,13 +229,28 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
         self.navigationController?.pushViewController(vc, animated: true)
     
     }
+    /**密码框*/
     
+    func KeyboardView(){
+        
+        let vc = KeyboardViewController()
+        vc.title = "密码框"
+        self.navigationController?.pushViewController(vc, animated: true)
     
+    }
+    /**文件下载*/
+    func filemanager(){
+        
+        let vc = DownLoadViewController()
+        vc.title = "文件下载"
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
         return names.count;
-        
     }
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.1
@@ -243,11 +258,8 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
         let cellID = "cell1"
-        
         var cell = tableView.dequeueReusableCellWithIdentifier(cellID)
-        
         if cell == nil{
-            
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellID)
         }
         
@@ -276,6 +288,11 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
         case 2 : bottomView()
             break
         case 3 : refreshViewcontroller()
+            break
+        case 4 : KeyboardView()
+            break
+        case 5 : filemanager()
+            break
         default :break
         
         }

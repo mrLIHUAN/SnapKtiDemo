@@ -19,8 +19,6 @@ class CommentViewController: UIViewController,MainCommentBtndelegate{
         
         
         //分享
-        
-        
         let btn3 = UIButton(frame: CGRectMake(100, 100, 100, 100) )
         btn3.backgroundColor = UIColor.redColor()
         btn3.tag = 1003
