@@ -33,9 +33,9 @@ class MainTableViewCell: UITableViewCell {
                         if(v.isKindOfClass(UIImageView)){
                             let img = v as! UIImageView
                             if(self.selected){
-                                img.image = UIImage(named: "fszc_mainmap_dianzhuang.png")
+                                img.image = UIImage(named: "评论")
                             }else{
-                                img.image = UIImage(named: "fszc_daohangimage.png")
+                                img.image = UIImage(named: "收藏")
                             }
                         }
                     }
