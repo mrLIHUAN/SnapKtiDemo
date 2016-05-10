@@ -23,7 +23,6 @@ extension UIButton{
         get{
             if(objc_getAssociatedObject(self, &buttonDelayedTime) == nil){
                 objc_setAssociatedObject(self, &buttonDelayedTime, 0,.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-                
                 return 0
             }else{
                 

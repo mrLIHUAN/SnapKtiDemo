@@ -3,3 +3,4 @@ platform :ios, '8.0'
 use_frameworks!
 
 pod 'SnapKit', '~> 0.19.1'
+pod 'SSZipArchive', '~> 1.1'

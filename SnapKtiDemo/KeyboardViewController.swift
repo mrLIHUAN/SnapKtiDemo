@@ -8,8 +8,10 @@
 
 import UIKit
 
-class KeyboardViewController: UIViewController {
+class KeyboardViewController: UIViewController,PassStringDelegate {
 
+    var passLabel:UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,7 +23,19 @@ class KeyboardViewController: UIViewController {
         button.addTarget(self, action: "action", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(button)
         
+        
+        passLabel = UILabel(frame: CGRectMake(100, 120 , 100, 50))
     
+        passLabel.textAlignment = .Center
+        
+        passLabel.textColor = UIColor.blackColor()
+        
+        passLabel.font = UIFont.systemFontOfSize(17)
+        
+        self.view.addSubview(passLabel)
+        
+    
+        
         
 
         // Do any additional setup after loading the view.
@@ -31,8 +45,15 @@ class KeyboardViewController: UIViewController {
         
         let password = PasswordAndkeyBoard(frame: CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height))
         password.show()
+        password.del = self
         self.view.addSubview(password)
     
+    }
+    
+    func PassWordString(pass: String) {
+        
+        passLabel.text = pass
+        print("\(pass)")
     }
 
     override func didReceiveMemoryWarning() {

@@ -1,10 +1,13 @@
 PODS:
   - SnapKit (0.19.1)
+  - SSZipArchive (1.1)
 
 DEPENDENCIES:
   - SnapKit (~> 0.19.1)
+  - SSZipArchive (~> 1.1)
 
 SPEC CHECKSUMS:
   SnapKit: eff58d6e3451bf2f482db2eccf86aecf371dc62d
+  SSZipArchive: de3d215ab73f87db627f81f2ce24f1731e3886c3
 
 COCOAPODS: 0.39.0

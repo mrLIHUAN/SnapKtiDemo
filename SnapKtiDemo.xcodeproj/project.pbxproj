@@ -53,6 +53,9 @@
 		187A321B1CAE5897000E9321 /* four.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 187A321A1CAE5897000E9321 /* four.jpg */; };
 		187A321D1CAE5A7D000E9321 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 187A321C1CAE5A7D000E9321 /* 5.jpg */; };
 		188203901CAB6C590060C5B3 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1882038F1CAB6C590060C5B3 /* SecondViewController.swift */; };
+		18CBD8C41CE0874E00E78FE6 /* MyTableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBD8C31CE0874E00E78FE6 /* MyTableViewExtension.swift */; };
+		18CBD8C61CE089ED00E78FE6 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBD8C51CE089ED00E78FE6 /* MainTableViewCell.swift */; };
+		18CBD8C81CE090FC00E78FE6 /* KeyBordAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBD8C71CE090FC00E78FE6 /* KeyBordAccessoryView.swift */; };
 		18CD1D781CDC84C90002A218 /* DownLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD1D771CDC84C90002A218 /* DownLoadViewController.swift */; };
 		18D45A891CD98D9D008C5C2D /* UIButton+touch.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D45A881CD98D9D008C5C2D /* UIButton+touch.m */; };
 		18DDAA4F1CD303DD0004D2DE /* RefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDAA4E1CD303DD0004D2DE /* RefreshViewController.swift */; };
@@ -129,6 +132,9 @@
 		187A321A1CAE5897000E9321 /* four.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = four.jpg; sourceTree = "<group>"; };
 		187A321C1CAE5A7D000E9321 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		1882038F1CAB6C590060C5B3 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		18CBD8C31CE0874E00E78FE6 /* MyTableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewExtension.swift; sourceTree = "<group>"; };
+		18CBD8C51CE089ED00E78FE6 /* MainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		18CBD8C71CE090FC00E78FE6 /* KeyBordAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyBordAccessoryView.swift; sourceTree = "<group>"; };
 		18CD1D771CDC84C90002A218 /* DownLoadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownLoadViewController.swift; sourceTree = "<group>"; };
 		18D45A861CD98D9C008C5C2D /* SnapKtiDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnapKtiDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		18D45A871CD98D9D008C5C2D /* UIButton+touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+touch.h"; sourceTree = "<group>"; };
@@ -291,6 +297,8 @@
 				187A321C1CAE5A7D000E9321 /* 5.jpg */,
 				1839199C1CAA105800D69792 /* AppDelegate.swift */,
 				1839199E1CAA105800D69792 /* ViewController.swift */,
+				18CBD8C51CE089ED00E78FE6 /* MainTableViewCell.swift */,
+				18CBD8C31CE0874E00E78FE6 /* MyTableViewExtension.swift */,
 				18D45A871CD98D9D008C5C2D /* UIButton+touch.h */,
 				18D45A881CD98D9D008C5C2D /* UIButton+touch.m */,
 				186AAB401CCEFE5F007E0E99 /* 底部评论视图 */,
@@ -356,6 +364,7 @@
 				186AAB511CCF65B7007E0E99 /* MyTextView.swift */,
 				186AAB411CCEFEA2007E0E99 /* CommentViewController.swift */,
 				186AAB3C1CCEFAD8007E0E99 /* MainCommentView.swift */,
+				18CBD8C71CE090FC00E78FE6 /* KeyBordAccessoryView.swift */,
 			);
 			name = "底部评论视图";
 			sourceTree = "<group>";
@@ -587,6 +596,7 @@
 				18090E0A1CCA1C06000D95BA /* LocationManager.swift in Sources */,
 				18090E091CCA1C06000D95BA /* CFCityPickerVCCommon.swift in Sources */,
 				187A32131CAE18D3000E9321 /* CirCleView.swift in Sources */,
+				18CBD8C81CE090FC00E78FE6 /* KeyBordAccessoryView.swift in Sources */,
 				18090E0D1CCA1C06000D95BA /* CFCityPickerVC+Main.swift in Sources */,
 				18090E0F1CCA1C06000D95BA /* CityModel.swift in Sources */,
 				1839199F1CAA105800D69792 /* ViewController.swift in Sources */,
@@ -601,11 +611,13 @@
 				1814ED881CACC84300D1DA65 /* NetWorkCore.swift in Sources */,
 				1814ED861CACB0E600D1DA65 /* SingleTon.swift in Sources */,
 				184997731CCDAA8C00E4494C /* PresentViewController.swift in Sources */,
+				18CBD8C61CE089ED00E78FE6 /* MainTableViewCell.swift in Sources */,
 				1837445F1CDB3CB100CFD8E5 /* KeyboardViewController.swift in Sources */,
 				18D45A891CD98D9D008C5C2D /* UIButton+touch.m in Sources */,
 				1837445A1CDADCF400CFD8E5 /* MyButtonExtension.swift in Sources */,
 				182A52831CD0C0D600A27366 /* RYCuteView.swift in Sources */,
 				18090E111CCA1C06000D95BA /* CFCityCell.swift in Sources */,
+				18CBD8C41CE0874E00E78FE6 /* MyTableViewExtension.swift in Sources */,
 				18DDAA4F1CD303DD0004D2DE /* RefreshViewController.swift in Sources */,
 				18090E131CCA1C06000D95BA /* CityMaskView.swift in Sources */,
 				18090E0E1CCA1C06000D95BA /* CFCityPickerVC+TableView.swift in Sources */,

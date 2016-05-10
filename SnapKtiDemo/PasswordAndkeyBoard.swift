@@ -8,11 +8,16 @@
 
 import UIKit
 
-
-
+@objc protocol PassStringDelegate{
+    
+    optional func PassWordString(pass: String)
+    
+}
 
 class PasswordAndkeyBoard: UIView {
 
+    var del : PassStringDelegate!
+    
     var passWordView : UIView!
     var KeyBoardView : UIView!
     var backView : UIView!
@@ -186,8 +191,6 @@ class PasswordAndkeyBoard: UIView {
             
             KeyBoardView.addSubview(btn)
             
-            
-            
         
         }
         
@@ -260,6 +263,8 @@ class PasswordAndkeyBoard: UIView {
         if (PassWordStr.length == 6){
             
            
+           del.PassWordString!(PassWordStr as String)
+            
             hiddenBackVew()
         
         }

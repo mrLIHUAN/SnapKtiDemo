@@ -44,6 +44,15 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
 //        self.navigationController?.navigationBar.translucent = false
         
         
+        let btn = UIButton(frame:CGRectMake(0, 0, 50, 30));
+        btn .setTitle("编辑", forState: UIControlState.Normal)
+        btn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        btn.titleLabel?.font = UIFont.systemFontOfSize(14)
+        btn.addTarget(self, action: "ffff", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: btn)
+        
+
         names = ["贝塞尔曲线","轮播图","底部评论视图","不一样的下拉刷新","密码框","文件下载"];
         
         
@@ -84,7 +93,7 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
         self.view .addSubview(mainTablView)
         
         
-        
+        mainTablView.allowsMultipleSelectionDuringEditing = true
 //        
 //        let doc : NSString = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
 ////        let path = (d .stringByAppendingPathComponent("ShopCart.sqlite")
@@ -178,6 +187,14 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
     
 //    func 
     
+    func ffff(){
+        
+
+        mainTablView.editing = true
+        mainTablView.setEditing(true, animated: true)
+    
+    }
+    
     
     func chooseCity(){
         
@@ -261,9 +278,11 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
         var cell = tableView.dequeueReusableCellWithIdentifier(cellID)
         if cell == nil{
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellID)
+            cell = MainTableViewCell(style: .Default, reuseIdentifier: cellID, str: names[indexPath.row])
         }
         
-        cell?.textLabel?.text = names[indexPath.row]
+//        cell?.accessoryType
+//        cell?.textLabel?.text = names[indexPath.row]
         
         
         return cell!
@@ -271,13 +290,16 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+//        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
 //        if indexPath.row == 0{
 //            
 //            chooseCity()
 //            
 //        }
+        if tableView.editing == true{
+        
+        }else{
         
         switch indexPath.row {
             
@@ -296,9 +318,22 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
         default :break
         
         }
+        }
         
         
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
         
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if(editingStyle == UITableViewCellEditingStyle.Delete){
+//            self.dataList.removeObjectAtIndex(indexPath.row)
+//            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+        }
     }
     
     /** 处理tabView分隔线无法到头的代码 */
@@ -327,6 +362,8 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
             cell.layoutMargins = UIEdgeInsetsZero
         }
     }
+    
+    
     
     func setImage(){
         circleView.urlImageArray = ["http://pic1.nipic.com/2008-09-08/200898163242920_2.jpg"]
@@ -373,7 +410,6 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
         print("han")
         finsh()
     }
-    
     
     func keyboardWillShow(notif:NSNotification){
         
@@ -832,10 +868,27 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
     
     }
     
+
+//    override func layoutSubviews() {
+//            super.layoutSubviews()
+//            for control in self.subviews{
+//                if control.isMemberOfClass(NSClassFromString("UITableViewCellEditControl")!){
+//                    for v in control.subviews{
+//                        if(v.isKindOfClass(UIImageView)){
+//                            let img = v as! UIImageView
+//                            if(self.selected){
+//                                img.image = UIImage(named: "fszc_mainmap_dianzhuang.png")
+//                            }else{
+//                                img.image = UIImage(named: "fszc_daohangimage.png")
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    
     
-    
-    
-    
+
        
 
     override func didReceiveMemoryWarning() {

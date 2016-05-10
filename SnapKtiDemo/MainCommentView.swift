@@ -129,6 +129,15 @@ class MainCommentView: UIView , UITextViewDelegate{
         textField.layer.borderWidth = 1
         textField.layer.masksToBounds = true
         self.addSubview(textField)
+
+        let v = KeyBordAccessoryView(frame: CGRectMake(0, 0,375 , 40), middleTitle: "fff")
+        v.canSureInputBGColor = UIColor.redColor()
+        v.canSureInputTitleColor = UIColor.greenColor()
+        v.canNoInputBGColor = UIColor.redColor()
+        v.canNoInputTitleColor = UIColor.greenColor()
+        v.fontSize = UIFont.systemFontOfSize(15)
+        textField.inputAccessoryView = v
+        
         
         textField.snp_makeConstraints { (make) -> Void in
             make.left.equalTo(10)
