@@ -7,16 +7,49 @@
 //
 
 import UIKit
+/**这个延展没有用到在这里面*/
+private var defaultInterval = "defaultInterval"
+extension UITextField{
+    
+    /// 上一个输入框
+    public var superResponder:UITextField? {
+        
+        get{
+            
+            if(objc_getAssociatedObject(self, &defaultInterval) == nil){
+                
+                return nil
+            }else{
+//                self.nextResponder()
+                return objc_getAssociatedObject(self,&defaultInterval) as? UITextField
+            }
+        }
+        set{
+            objc_setAssociatedObject(self, &defaultInterval, newValue,.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
+}
 
 
+/**辅助视图的类型*/
+enum KeyBordAccessoryViewStyle{
+    case accessoryView //辅助视图
+    case textBox       //有一个UITextField
 
-class KeyBordAccessoryView: UIView {
+}
+class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
 //取消
-    var canNoInPut : UIButton!
+    var canNoInPut = UIButton()
 //完成
-    var canSureInPut : UIButton!
+    var canSureInPut = UIButton()
 //中间Label
     var label = UILabel()
+    
+    
+    /**完成Done*/
+     var DoneBtn = UIButton()
+     var textfield = UITextField()
     
     
     
@@ -27,14 +60,6 @@ class KeyBordAccessoryView: UIView {
         }
     
     }
-    
-    /**“确定”字体的颜色*/
-    var canSureInputTitleColor : UIColor!{
-        didSet{
-            canSureInPut.setTitleColor(canSureInputTitleColor, forState: UIControlState.Normal)
-        }
-    }
-    
     /**“取消”背景颜色*/
     var canNoInputBGColor : UIColor!{
         didSet{
@@ -42,13 +67,28 @@ class KeyBordAccessoryView: UIView {
         }
     }
     
+    
+    
+    
+    
     /**“确定”背景颜色*/
     var canSureInputBGColor : UIColor!{
         didSet{
             canSureInPut.backgroundColor = canSureInputBGColor
             
+            DoneBtn.backgroundColor = canSureInputBGColor
+            
         }
     }
+    
+    /**“确定”字体的颜色*/
+    var canSureInputTitleColor : UIColor!{
+        didSet{
+            canSureInPut.setTitleColor(canSureInputTitleColor, forState: UIControlState.Normal)
+            DoneBtn.setTitleColor(canSureInputTitleColor, forState: UIControlState.Normal)
+        }
+    }
+
 
     /**“中间”字体的颜色*/
     var middleTitleColor : UIColor!{
@@ -64,7 +104,8 @@ class KeyBordAccessoryView: UIView {
         didSet{
             canNoInPut.titleLabel?.font = fontSize
             canSureInPut.titleLabel?.font = fontSize
-        
+            DoneBtn.titleLabel?.font = fontSize
+            
         }
     
     }
@@ -74,23 +115,127 @@ class KeyBordAccessoryView: UIView {
     
     
     
-    init(frame: CGRect,middleTitle : String) {
+    init(frame: CGRect,middleTitle : String,style:KeyBordAccessoryViewStyle) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.whiteColor()
         
-        creatLeftBtn()
-        creatRightBtn()
-        creatMiddleLabel(middleTitle)
-        creatline()
+        if style == KeyBordAccessoryViewStyle.accessoryView{
+            
+            creatLeftBtn()
+            creatRightBtn()
+            creatMiddleLabel(middleTitle)
+            creatline()
+        }
+        
+        if style == KeyBordAccessoryViewStyle.textBox{
+            
+            creatDone()
+            
+            creatTextField()
+        
+        }
+        
+        
+    }
+    
+    /**+++++++++++++++++KeyBordAccessoryViewStyle.textBox+++++++++++++++++++++++++*/
+    /**完成*/
+    private func creatDone(){
+        
+        self.addSubview(DoneBtn)
+        DoneBtn.snp_makeConstraints { (make) -> Void in
+            make.right.equalTo(-10)
+            make.width.equalTo(50)
+            make.top.equalTo(5)
+            make.bottom.equalTo(-5)
+        }
+        
+        DoneBtn.setTitle("完成", forState: UIControlState.Normal)
+        DoneBtn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        DoneBtn.layer.cornerRadius = 5
+        DoneBtn.addTarget(self, action: "actionBtn:", forControlEvents: UIControlEvents.TouchUpInside)
+        DoneBtn.layer.masksToBounds = true
+        DoneBtn.backgroundColor = UIColor.groupTableViewBackgroundColor()
+    }
 
+    
+    /**textField*/
+   private func creatTextField(){
+    
+    
+    textfield.layer.cornerRadius = 5
+    textfield.layer.borderColor = UIColor.grayColor().CGColor
+    textfield.layer.borderWidth = 1
+    textfield.layer.masksToBounds = true
+    textfield.becomeFirstResponder()
+    textfield.delegate = self
+    textfield.font = UIFont.systemFontOfSize(15)
+    self.addSubview(textfield)
+    textfield.snp_makeConstraints { (make) -> Void in
+        make.left.equalTo(10)
+        make.right.equalTo(DoneBtn.snp_left).offset(-10)
+        make.top.equalTo(5)
+        make.bottom.equalTo(-5)
+    }
+    }
+
+    func textFieldDidEndEditing(textField: UITextField) {
+        
+
+        var nextRes = self.nextResponder()
+        
+        
+                    while(nextRes != nil){
+                        
+                        if(nextRes!.isKindOfClass(UITextField)){
+                            let root = nextRes as! UITextField
+                            
+                            root.text = textField.text
+
+                            
+                            return
+                        }
+                        
+                        if(nextRes!.isKindOfClass(UITextView)){
+                            let root = nextRes as! UITextView
+                            
+                            root.text = textField.text
+                            
+                            
+                            return
+                        }
+
+        
+                        nextRes = nextRes?.nextResponder()
+                    
+                    }
     }
     
     
+    /**+++++++++++++++++KeyBordAccessoryViewStyle.textBox结束+++++++++++++++++++++++++*/
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /**////////////////////这是KeyBordAccessoryViewStyle.accessoryView////////////////*/
     
     //左边btn
-    func creatLeftBtn(){
-        canNoInPut = UIButton()
+   private func creatLeftBtn(){
+//        canNoInPut = UIButton()
         self.addSubview(canNoInPut)
         canNoInPut.snp_makeConstraints { (make) -> Void in
             make.left.equalTo(10)
@@ -108,9 +253,9 @@ class KeyBordAccessoryView: UIView {
     }
     
     //右边btn
-    func creatRightBtn(){
+   private func creatRightBtn(){
         
-        canSureInPut = UIButton()
+//        canSureInPut = UIButton()
         self.addSubview(canSureInPut)
         canSureInPut.snp_makeConstraints { (make) -> Void in
             make.right.equalTo(-10)
@@ -127,7 +272,7 @@ class KeyBordAccessoryView: UIView {
     
     }
    //中间Label
-    func creatMiddleLabel(title : String){
+   private func creatMiddleLabel(title : String){
        
         label.text = title
         label.textColor = UIColor.blackColor()
@@ -141,7 +286,7 @@ class KeyBordAccessoryView: UIView {
     }
     
     //上下两条线
-    func creatline(){
+   private func creatline(){
         
         let topLine = UIView()
         self.addSubview(topLine)
@@ -175,28 +320,8 @@ class KeyBordAccessoryView: UIView {
         
         print("取消")
             var nextRes = self.nextResponder()! as UIResponder
-            
-//            while(nextRes != nil){
-//                if(nextRes!.isKindOfClass(UITextView)){
-//                    let root = nextRes as! UITextView
-//                    root.resignFirstResponder()
-//                    return
-//                }
-//                
-//                if(nextRes!.isKindOfClass(UITextField)){
-//                    let root = nextRes as! UITextField
-//                    root.resignFirstResponder()
-//                    return
-//                }
-//            
-//                nextRes = nextRes?.nextResponder()
-//            
-//            }
-            
-            
             repeat{
-//                
-                if ((nextRes.isKindOfClass(UITextView))){
+              if ((nextRes.isKindOfClass(UITextView))){
                     
                     let t = nextRes as! UITextView
                     t.resignFirstResponder()
@@ -215,14 +340,15 @@ class KeyBordAccessoryView: UIView {
             
         }else{
             
+            textfield.resignFirstResponder()
+            
             var nextRes = self.nextResponder()! as UIResponder
             repeat{
-                //
                 if ((nextRes.isKindOfClass(UITextView))){
                     
                     let t = nextRes as! UITextView
                     t.resignFirstResponder()
-
+                    
                     return
                 }
                 
@@ -230,6 +356,7 @@ class KeyBordAccessoryView: UIView {
                     let t = nextRes as! UITextField
 
                     t.resignFirstResponder()
+                    
                     return
                     
                 }
@@ -243,7 +370,7 @@ class KeyBordAccessoryView: UIView {
         
     
     }
-    
+     /**////////////////////这是KeyBordAccessoryViewStyle.accessoryView结束////////////*/
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
