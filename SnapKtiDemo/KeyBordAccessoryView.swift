@@ -31,7 +31,6 @@ extension UITextField{
     
 }
 
-
 /**辅助视图的类型*/
 enum KeyBordAccessoryViewStyle{
     case accessoryView //辅助视图
@@ -58,7 +57,6 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
         didSet{
             canNoInPut.setTitleColor(canNoInputTitleColor, forState: UIControlState.Normal)
         }
-    
     }
     /**“取消”背景颜色*/
     var canNoInputBGColor : UIColor!{
@@ -134,8 +132,6 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
             creatTextField()
         
         }
-        
-        
     }
     
     /**+++++++++++++++++KeyBordAccessoryViewStyle.textBox+++++++++++++++++++++++++*/
@@ -216,7 +212,8 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
     
     
     
-    
+
+
     
     
     
