@@ -175,6 +175,25 @@ class KeyBordAccessoryView: UIView {
         
         print("取消")
             var nextRes = self.nextResponder()! as UIResponder
+            
+//            while(nextRes != nil){
+//                if(nextRes!.isKindOfClass(UITextView)){
+//                    let root = nextRes as! UITextView
+//                    root.resignFirstResponder()
+//                    return
+//                }
+//                
+//                if(nextRes!.isKindOfClass(UITextField)){
+//                    let root = nextRes as! UITextField
+//                    root.resignFirstResponder()
+//                    return
+//                }
+//            
+//                nextRes = nextRes?.nextResponder()
+//            
+//            }
+            
+            
             repeat{
 //                
                 if ((nextRes.isKindOfClass(UITextView))){
@@ -184,17 +203,16 @@ class KeyBordAccessoryView: UIView {
                     t.text = ""
                     return
                 }
-                
                 if(nextRes.isKindOfClass(UITextField)){
                     let t = nextRes as! UITextField
                     t.text = ""
                     t.resignFirstResponder()
                     return
                 }
-                
                 nextRes = nextRes.nextResponder()!
-            
             }while(true)
+            
+            
         }else{
             
             var nextRes = self.nextResponder()! as UIResponder
@@ -219,9 +237,6 @@ class KeyBordAccessoryView: UIView {
                 nextRes = nextRes.nextResponder()!
                 
             }while(true)
-            
-
-            print("完成")
         
         }
         
