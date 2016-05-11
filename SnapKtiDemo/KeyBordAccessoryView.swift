@@ -17,13 +17,13 @@ extension UITextField{
         get{
             
             if(objc_getAssociatedObject(self, &defaultInterval) == nil){
-                
                 return nil
             }else{
 //                self.nextResponder()
                 return objc_getAssociatedObject(self,&defaultInterval) as? UITextField
             }
         }
+        
         set{
             objc_setAssociatedObject(self, &defaultInterval, newValue,.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
@@ -37,6 +37,8 @@ enum KeyBordAccessoryViewStyle{
     case textBox       //有一个UITextField
 
 }
+
+
 class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
 //取消
     var canNoInPut = UIButton()
@@ -44,7 +46,6 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
     var canSureInPut = UIButton()
 //中间Label
     var label = UILabel()
-    
     
     /**完成Done*/
      var DoneBtn = UIButton()
@@ -103,15 +104,8 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
             canNoInPut.titleLabel?.font = fontSize
             canSureInPut.titleLabel?.font = fontSize
             DoneBtn.titleLabel?.font = fontSize
-            
         }
-    
     }
-    
-    
-    
-    
-    
     
     init(frame: CGRect,middleTitle : String,style:KeyBordAccessoryViewStyle) {
         super.init(frame: frame)
@@ -130,7 +124,6 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
             creatDone()
             
             creatTextField()
-        
         }
     }
     
@@ -145,7 +138,6 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
             make.top.equalTo(5)
             make.bottom.equalTo(-5)
         }
-        
         DoneBtn.setTitle("完成", forState: UIControlState.Normal)
         DoneBtn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         DoneBtn.layer.cornerRadius = 5
@@ -163,7 +155,6 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
     textfield.layer.borderColor = UIColor.grayColor().CGColor
     textfield.layer.borderWidth = 1
     textfield.layer.masksToBounds = true
-    textfield.becomeFirstResponder()
     textfield.delegate = self
     textfield.font = UIFont.systemFontOfSize(15)
     self.addSubview(textfield)
@@ -173,6 +164,7 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
         make.top.equalTo(5)
         make.bottom.equalTo(-5)
     }
+    
     }
 
     func textFieldDidEndEditing(textField: UITextField) {
@@ -185,10 +177,8 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
                         
                         if(nextRes!.isKindOfClass(UITextField)){
                             let root = nextRes as! UITextField
-                            
                             root.text = textField.text
-
-                            
+                            textField.text = ""
                             return
                         }
                         
@@ -197,15 +187,24 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
                             
                             root.text = textField.text
                             
-                            
+                            textField.text = ""
+                            return
+                        }
+                        
+                        if(nextRes!.isKindOfClass(UISearchBar)){
+                            let t = nextRes as! UISearchBar
+                            t.text = textField.text
+                            textField.text = ""
                             return
                         }
 
-        
                         nextRes = nextRes?.nextResponder()
                     
                     }
+        
+        
     }
+    
     
     
     /**+++++++++++++++++KeyBordAccessoryViewStyle.textBox结束+++++++++++++++++++++++++*/
@@ -214,9 +213,6 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
     
 
 
-    
-    
-    
     
     
     
@@ -331,6 +327,16 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
                     t.resignFirstResponder()
                     return
                 }
+                if(nextRes.isKindOfClass(UISearchBar)){
+                    let t = nextRes as! UISearchBar
+                    t.text = ""
+                    t.resignFirstResponder()
+                    
+                    return
+                    
+                }
+                
+
                 nextRes = nextRes.nextResponder()!
             }while(true)
             
@@ -355,9 +361,15 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
                     t.resignFirstResponder()
                     
                     return
-                    
                 }
+                if(nextRes.isKindOfClass(UISearchBar)){
+                    let t = nextRes as! UISearchBar
+                    t.resignFirstResponder()
+                    
+                    return
                 
+                }
+            
                 nextRes = nextRes.nextResponder()!
                 
             }while(true)
@@ -367,6 +379,9 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
         
     
     }
+    
+    
+    
      /**////////////////////这是KeyBordAccessoryViewStyle.accessoryView结束////////////*/
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

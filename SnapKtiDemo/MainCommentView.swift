@@ -8,10 +8,6 @@
 
 import UIKit
 
-
-
-
-
 @objc protocol MainCommentBtndelegate : NSObjectProtocol{
     /**
      点击btn 通过代理传值
@@ -42,7 +38,7 @@ class MainCommentView: UIView , UITextViewDelegate{
     weak var dataSource : MainTextFieldDataSource!
     
     /**写评论的TextView*/
-    var textField = UITextField()
+    var textField = MyTextView()
 
     /**主要是确定评论输入框的宽度*/
     let screenWidth : CGFloat = UIScreen.mainScreen().bounds.width
@@ -127,7 +123,7 @@ class MainCommentView: UIView , UITextViewDelegate{
         textField.placeholder = "写评论"
         textField.returnKeyType = UIReturnKeyType.Done
         textField.font = UIFont.systemFontOfSize(15)
-//        textField.delegate = self
+        textField.delegate = self
         textField.layer.cornerRadius = 5
         textField.layer.borderColor = UIColor.grayColor().CGColor
         textField.layer.borderWidth = 1
