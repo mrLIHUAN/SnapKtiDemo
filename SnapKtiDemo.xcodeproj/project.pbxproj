@@ -38,6 +38,8 @@
 		183919BD1CAA105800D69792 /* SnapKtiDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183919BC1CAA105800D69792 /* SnapKtiDemoUITests.swift */; };
 		184997731CCDAA8C00E4494C /* PresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184997721CCDAA8C00E4494C /* PresentViewController.swift */; };
 		184997751CCDF45E00E4494C /* CirCleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184997741CCDF45E00E4494C /* CirCleViewController.swift */; };
+		18668B231CEAAA7C0023508E /* SortingAlgorithmUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18668B221CEAAA7C0023508E /* SortingAlgorithmUtils.swift */; };
+		18668B251CEAAF930023508E /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18668B241CEAAF930023508E /* SortViewController.swift */; };
 		186AAB3D1CCEFAD8007E0E99 /* MainCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186AAB3C1CCEFAD8007E0E99 /* MainCommentView.swift */; };
 		186AAB421CCEFEA2007E0E99 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186AAB411CCEFEA2007E0E99 /* CommentViewController.swift */; };
 		186AAB481CCF3BE3007E0E99 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186AAB471CCF3BE3007E0E99 /* ButtonExtension.swift */; };
@@ -117,6 +119,8 @@
 		183919BE1CAA105800D69792 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		184997721CCDAA8C00E4494C /* PresentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentViewController.swift; sourceTree = "<group>"; };
 		184997741CCDF45E00E4494C /* CirCleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirCleViewController.swift; sourceTree = "<group>"; };
+		18668B221CEAAA7C0023508E /* SortingAlgorithmUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortingAlgorithmUtils.swift; sourceTree = "<group>"; };
+		18668B241CEAAF930023508E /* SortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
 		186AAB3C1CCEFAD8007E0E99 /* MainCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCommentView.swift; sourceTree = "<group>"; };
 		186AAB411CCEFEA2007E0E99 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		186AAB471CCF3BE3007E0E99 /* ButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
@@ -306,6 +310,7 @@
 				18DDAA4D1CD3038E0004D2DE /* 不一样的下拉刷新 */,
 				1837445D1CDB3BDE00CFD8E5 /* 密码框数字键盘 */,
 				18CD1D791CDC84DC0002A218 /* 文件下载 */,
+				18668B211CEAA9DB0023508E /* 算法集合 */,
 				186AAB3E1CCEFE0E007E0E99 /* 贝塞尔曲线 */,
 				1882038F1CAB6C590060C5B3 /* SecondViewController.swift */,
 				181A135F1CABC98C00C8D798 /* BaseBtn.swift */,
@@ -336,6 +341,15 @@
 				183919BE1CAA105800D69792 /* Info.plist */,
 			);
 			path = SnapKtiDemoUITests;
+			sourceTree = "<group>";
+		};
+		18668B211CEAA9DB0023508E /* 算法集合 */ = {
+			isa = PBXGroup;
+			children = (
+				18668B241CEAAF930023508E /* SortViewController.swift */,
+				18668B221CEAAA7C0023508E /* SortingAlgorithmUtils.swift */,
+			);
+			name = "算法集合";
 			sourceTree = "<group>";
 		};
 		186AAB3E1CCEFE0E007E0E99 /* 贝塞尔曲线 */ = {
@@ -590,6 +604,7 @@
 			files = (
 				18090E081CCA1C06000D95BA /* CFCityPickerVC.swift in Sources */,
 				186AAB521CCF65B7007E0E99 /* MyTextView.swift in Sources */,
+				18668B251CEAAF930023508E /* SortViewController.swift in Sources */,
 				188203901CAB6C590060C5B3 /* SecondViewController.swift in Sources */,
 				184997751CCDF45E00E4494C /* CirCleViewController.swift in Sources */,
 				186AAB3D1CCEFAD8007E0E99 /* MainCommentView.swift in Sources */,
@@ -610,6 +625,7 @@
 				186AAB481CCF3BE3007E0E99 /* ButtonExtension.swift in Sources */,
 				1814ED881CACC84300D1DA65 /* NetWorkCore.swift in Sources */,
 				1814ED861CACB0E600D1DA65 /* SingleTon.swift in Sources */,
+				18668B231CEAAA7C0023508E /* SortingAlgorithmUtils.swift in Sources */,
 				184997731CCDAA8C00E4494C /* PresentViewController.swift in Sources */,
 				18CBD8C61CE089ED00E78FE6 /* MainTableViewCell.swift in Sources */,
 				1837445F1CDB3CB100CFD8E5 /* KeyboardViewController.swift in Sources */,

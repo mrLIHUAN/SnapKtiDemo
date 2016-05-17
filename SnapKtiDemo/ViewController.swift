@@ -53,7 +53,7 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: btn)
         
 
-        names = ["贝塞尔曲线","轮播图","底部评论视图","不一样的下拉刷新","密码框","文件下载"];
+        names = ["贝塞尔曲线","轮播图","底部评论视图","不一样的下拉刷新","密码框","文件下载","算法集合"];
         
         
 //        let btn = UIButton()
@@ -264,6 +264,12 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
         
     
     }
+    /**算法集合*/
+    func sortVC(){
+        let vc = SortViewController()
+        vc.title = "算法集合"
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
@@ -315,17 +321,17 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
             break
         case 5 : filemanager()
             break
+        case 6 : sortVC()
+            break
         default :break
         
         }
+            
         }
-        
-        
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
-        
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {

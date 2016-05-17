@@ -9,11 +9,21 @@
 import UIKit
 import SSZipArchive
 
-class DownLoadViewController: UIViewController,NSURLConnectionDataDelegate,NSURLConnectionDelegate {
+class DownLoadViewController: UIViewController,NSURLConnectionDataDelegate,NSURLConnectionDelegate,NSURLSessionDownloadDelegate {
 
     let filePath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory , NSSearchPathDomainMask.UserDomainMask, true).last! + "/master.zip"
     
     var label : UILabel!
+    
+    lazy var session : NSURLSession = {
+        
+        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        return NSURLSession(configuration: config, delegate: self, delegateQueue: NSOperationQueue.mainQueue())
+        
+    }()
+    
+    var downloadTask : NSURLSessionDownloadTask!
+    
     
     //总时长
     var totalLength : Double!
@@ -84,13 +94,16 @@ class DownLoadViewController: UIViewController,NSURLConnectionDataDelegate,NSURL
         
         
         let url = NSURL(string: "https://github.com/mrLIHUAN/JSAndSwift/archive/master.zip")
-        let request = NSURLRequest(URL: url!)
-
-        NSURLConnection(request: request, delegate: self)
-        //创建文件路径
-        NSFileManager .defaultManager().createFileAtPath(filePath, contents: nil, attributes: nil)
         
+//        let request = NSURLRequest(URL: url!)
+//
+//        NSURLConnection(request: request, delegate: self)
+//        //创建文件路径
+//        NSFileManager .defaultManager().createFileAtPath(filePath, contents: nil, attributes: nil)
         
+      downloadTask = session.downloadTaskWithURL(url!)
+        
+        downloadTask.resume()
     
     }
     
@@ -121,7 +134,6 @@ class DownLoadViewController: UIViewController,NSURLConnectionDataDelegate,NSURL
 
         if(bufferData!.length > 1 * 1000){
             appenFileData(bufferData!)
-            
             bufferData = nil
         }
     }
@@ -142,7 +154,6 @@ class DownLoadViewController: UIViewController,NSURLConnectionDataDelegate,NSURL
         let path = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.UserDomainMask, true).last!
         SSZipArchive.unzipFileAtPath(filePath, toDestination: path)
     }
-    
 
     func clear(){
         
@@ -160,29 +171,47 @@ class DownLoadViewController: UIViewController,NSURLConnectionDataDelegate,NSURL
             
                 let absolutePath = path.stringByAppendingString("/"+fileName)
                 
-                
                 print("\(absolutePath)")
                 
                try! fileManager.removeItemAtPath(absolutePath)
                 
 //               folderSize = try! fileManager.attributesOfItemAtPath(absolutePath)
                 
-                
-                
             }
         
         }
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        }
     
+    
+    func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didFinishDownloadingToURL location: NSURL) {
+        
+        var fileString = NSHomeDirectory() as NSString
+        fileString = fileString.stringByAppendingPathComponent("/Documents/")
+        let fileName = "/icon.zip"
+        
+        let url = NSURL(fileURLWithPath: "\(fileString)\(fileName)")
+        let manager = NSFileManager .defaultManager()
+        
+       try? manager.moveItemAtURL(location, toURL: url)
+        
+        
+        print("++++\(location)")
+        
     }
+    
+
+    
+    /**
+    bytesWritten               : 本次下载的字节数
+    totalBytesWritten          : 已经下载的字节数
+    totalBytesExpectedToWrite  : 下载总大小
+    */
+    func URLSession(session: NSURLSession, downloadTask: NSURLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+        
+        print("+++\(bytesWritten)+++\(totalBytesWritten)---\(totalBytesExpectedToWrite)")
+
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

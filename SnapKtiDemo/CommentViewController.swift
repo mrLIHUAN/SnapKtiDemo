@@ -17,7 +17,6 @@ class CommentViewController: UIViewController,MainCommentBtndelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         //分享
         let btn3 = UIButton(frame: CGRectMake(100, 100, 100, 100) )
         btn3.backgroundColor = UIColor.redColor()

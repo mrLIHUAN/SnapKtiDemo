@@ -37,8 +37,6 @@ enum KeyBordAccessoryViewStyle{
     case textBox       //有一个UITextField
 
 }
-
-
 class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
 //取消
     var canNoInPut = UIButton()
@@ -145,12 +143,10 @@ class KeyBordAccessoryView: UIView ,UITextFieldDelegate{
         DoneBtn.layer.masksToBounds = true
         DoneBtn.backgroundColor = UIColor.groupTableViewBackgroundColor()
     }
-
+    
     
     /**textField*/
    private func creatTextField(){
-    
-    
     textfield.layer.cornerRadius = 5
     textfield.layer.borderColor = UIColor.grayColor().CGColor
     textfield.layer.borderWidth = 1
