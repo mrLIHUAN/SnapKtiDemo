@@ -40,6 +40,7 @@
 		184997751CCDF45E00E4494C /* CirCleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184997741CCDF45E00E4494C /* CirCleViewController.swift */; };
 		18668B231CEAAA7C0023508E /* SortingAlgorithmUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18668B221CEAAA7C0023508E /* SortingAlgorithmUtils.swift */; };
 		18668B251CEAAF930023508E /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18668B241CEAAF930023508E /* SortViewController.swift */; };
+		18668B271CEB161F0023508E /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18668B261CEB161F0023508E /* Person.swift */; };
 		186AAB3D1CCEFAD8007E0E99 /* MainCommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186AAB3C1CCEFAD8007E0E99 /* MainCommentView.swift */; };
 		186AAB421CCEFEA2007E0E99 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186AAB411CCEFEA2007E0E99 /* CommentViewController.swift */; };
 		186AAB481CCF3BE3007E0E99 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186AAB471CCF3BE3007E0E99 /* ButtonExtension.swift */; };
@@ -121,6 +122,7 @@
 		184997741CCDF45E00E4494C /* CirCleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirCleViewController.swift; sourceTree = "<group>"; };
 		18668B221CEAAA7C0023508E /* SortingAlgorithmUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortingAlgorithmUtils.swift; sourceTree = "<group>"; };
 		18668B241CEAAF930023508E /* SortViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
+		18668B261CEB161F0023508E /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		186AAB3C1CCEFAD8007E0E99 /* MainCommentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCommentView.swift; sourceTree = "<group>"; };
 		186AAB411CCEFEA2007E0E99 /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 		186AAB471CCF3BE3007E0E99 /* ButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
@@ -348,6 +350,7 @@
 			children = (
 				18668B241CEAAF930023508E /* SortViewController.swift */,
 				18668B221CEAAA7C0023508E /* SortingAlgorithmUtils.swift */,
+				18668B261CEB161F0023508E /* Person.swift */,
 			);
 			name = "算法集合";
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 				18090E0A1CCA1C06000D95BA /* LocationManager.swift in Sources */,
 				18090E091CCA1C06000D95BA /* CFCityPickerVCCommon.swift in Sources */,
 				187A32131CAE18D3000E9321 /* CirCleView.swift in Sources */,
+				18668B271CEB161F0023508E /* Person.swift in Sources */,
 				188D02F71CE19463008F7156 /* KeyBordAccessoryView.swift in Sources */,
 				18090E0D1CCA1C06000D95BA /* CFCityPickerVC+Main.swift in Sources */,
 				18090E0F1CCA1C06000D95BA /* CityModel.swift in Sources */,
