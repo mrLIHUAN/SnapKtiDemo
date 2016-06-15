@@ -39,7 +39,6 @@ class CirCleView: UIView , UIScrollViewDelegate{
             self.imageArray = newValue
         
         }
-        
         didSet{
             contentScrollView.scrollEnabled = !(imageArray.count == 1)
             self.pageIndicator.frame = CGRectMake(self.frame.size.width - 20 * CGFloat(imageArray.count), self.frame.size.height - 30, 20 * CGFloat(imageArray.count), 20)
@@ -52,7 +51,6 @@ class CirCleView: UIView , UIScrollViewDelegate{
         willSet(newValue){
             self.urlImageArray = newValue
         }
-        
         didSet {
             for urlString in self.urlImageArray!{
                 
@@ -73,9 +71,6 @@ class CirCleView: UIView , UIScrollViewDelegate{
         }
     }
     
-    
-    
-    
     var currentImageView:  UIImageView!
     var lastImageView:     UIImageView!
     var nextImageView:     UIImageView!
@@ -90,7 +85,6 @@ class CirCleView: UIView , UIScrollViewDelegate{
         self.imageArray = imageArray
         self.indexOfCurrentImage = 0
         
-
         self.setUpCircleView()
     }
     
@@ -165,14 +159,13 @@ class CirCleView: UIView , UIScrollViewDelegate{
         self.lastImageView.image = self.imageArray[self.getLastImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)]
         self.nextImageView.image = self.imageArray[self.getNextImageIndex(indexOfCurrentImage: self.indexOfCurrentImage)]
     }
-
+    
     
     /**
      定时器走的方法
      */
     func timerAction(){
         contentScrollView.setContentOffset(CGPointMake(self.frame.size.width * 2, 0), animated: true)
-    
     }
     
     //MARK Delegate Methods
@@ -184,8 +177,6 @@ class CirCleView: UIView , UIScrollViewDelegate{
     }
     
     func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
-        
-        
         
     }
     
@@ -231,6 +222,7 @@ class CirCleView: UIView , UIScrollViewDelegate{
     
     
     private func getNextImageIndex(indexOfCurrentImage index:Int)->Int{
+        
         let tempindex = index+1
         
         return tempindex < self.imageArray.count ? tempindex : 0
@@ -245,11 +237,6 @@ class CirCleView: UIView , UIScrollViewDelegate{
 
      
     }
-    
-    
-    
-    
-    
 }
 
 

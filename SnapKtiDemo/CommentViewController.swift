@@ -36,14 +36,16 @@ class CommentViewController: UIViewController,MainCommentBtndelegate{
 //            make.width.equalTo(30)
 //        }
         
+        let textField = UITextField(frame: CGRectMake(100, 220, 100, 100))
+        textField.attributedPlaceholder = NSAttributedString(string: "请输入密码", attributes: [NSForegroundColorAttributeName : UIColor.redColor()])
+        self.view.addSubview(textField)
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillChange:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardwillhidden:", name: UIKeyboardWillHideNotification, object: nil)
         self.view.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
         creatBottomView()
     }
-
-    
     
     //键盘的监听l
     var heightkk:CGFloat = 0

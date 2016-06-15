@@ -62,6 +62,7 @@
 		18CD1D781CDC84C90002A218 /* DownLoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CD1D771CDC84C90002A218 /* DownLoadViewController.swift */; };
 		18D45A891CD98D9D008C5C2D /* UIButton+touch.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D45A881CD98D9D008C5C2D /* UIButton+touch.m */; };
 		18DDAA4F1CD303DD0004D2DE /* RefreshViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DDAA4E1CD303DD0004D2DE /* RefreshViewController.swift */; };
+		18E23B391D05225700844AE0 /* CNCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E23B381D05225700844AE0 /* CNCircleProgressView.swift */; };
 		9B3A73DA8DCC367A6FCDF714 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8706101BB87F26F7E71B5D53 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -146,6 +147,7 @@
 		18D45A871CD98D9D008C5C2D /* UIButton+touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+touch.h"; sourceTree = "<group>"; };
 		18D45A881CD98D9D008C5C2D /* UIButton+touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+touch.m"; sourceTree = "<group>"; };
 		18DDAA4E1CD303DD0004D2DE /* RefreshViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshViewController.swift; sourceTree = "<group>"; };
+		18E23B381D05225700844AE0 /* CNCircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CNCircleProgressView.swift; sourceTree = "<group>"; };
 		4A2D0F3B9BF67EC056AEF6FB /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8706101BB87F26F7E71B5D53 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD28B443495944E86FD0AB10 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 			children = (
 				184997721CCDAA8C00E4494C /* PresentViewController.swift */,
 				182A52821CD0C0D600A27366 /* RYCuteView.swift */,
+				18E23B381D05225700844AE0 /* CNCircleProgressView.swift */,
 			);
 			name = "贝塞尔曲线";
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				18090E111CCA1C06000D95BA /* CFCityCell.swift in Sources */,
 				18CBD8C41CE0874E00E78FE6 /* MyTableViewExtension.swift in Sources */,
 				18DDAA4F1CD303DD0004D2DE /* RefreshViewController.swift in Sources */,
+				18E23B391D05225700844AE0 /* CNCircleProgressView.swift in Sources */,
 				18090E131CCA1C06000D95BA /* CityMaskView.swift in Sources */,
 				18090E0E1CCA1C06000D95BA /* CFCityPickerVC+TableView.swift in Sources */,
 				181A13601CABC98C00C8D798 /* BaseBtn.swift in Sources */,

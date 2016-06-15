@@ -21,11 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
         let VC = ViewController()
-        
-        
         let nav = UINavigationController(rootViewController: VC)
-        
-        
         self.window?.rootViewController = nav
         
         

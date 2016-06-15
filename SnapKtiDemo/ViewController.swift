@@ -35,25 +35,28 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
     var circleView: CirCleView!
     
     var names : [String] = []
+    
+    
+    var barimageView : UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "首页"
         self.view.backgroundColor = UIColor.whiteColor()
         self.navigationController?.navigationBar.barTintColor = UIColor.redColor()
-//        self.navigationController?.navigationBar.translucent = false
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
         
+        barimageView = self.navigationController?.navigationBar.subviews.first
         
         let btn = UIButton(frame:CGRectMake(0, 0, 50, 30));
         btn .setTitle("编辑", forState: UIControlState.Normal)
         btn.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
         btn.titleLabel?.font = UIFont.systemFontOfSize(14)
         btn.addTarget(self, action: "ffff", forControlEvents: UIControlEvents.TouchUpInside)
-        
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: btn)
-        
+//
 
-        names = ["贝塞尔曲线","轮播图","底部评论视图","不一样的下拉刷新","密码框","文件下载","算法集合"];
+        names = ["贝塞尔曲线","轮播图","底部评论视图","不一样的下拉刷新","密码框","文件下载","算法集合","算法集合","算法集合","算法集合","算法集合","算法集合","算法集合","算法集合","算法集合","算法集合","算法集合","算法集合","算法集合","算法集合"];
         
         
 //        let btn = UIButton()
@@ -269,6 +272,7 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
         let vc = SortViewController()
         vc.title = "算法集合"
         self.navigationController?.pushViewController(vc, animated: true)
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -620,6 +624,36 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
         }
     }
     
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let minAlphaOffset = -64 as CGFloat
+        let maxAlphaOffset = 200 as CGFloat
+        
+        var offset = scrollView.contentOffset.y
+        
+        var alpha = (offset - minAlphaOffset) / (maxAlphaOffset - minAlphaOffset)
+        
+        print("\(alpha)")
+        barimageView.alpha = alpha
+        
+        
+        if alpha > 1{
+            
+//
+            UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+            
+//            setNeedsStatusBarAppearanceUpdate()
+//            self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        
+        }
+        
+        
+    }
+    
+    
+//    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+//        return UIStatusBarStyle.LightContent
+//    }
+    
     /**
      textFieldDelegte
      
@@ -672,8 +706,6 @@ class ViewController: UIViewController,UITextFieldDelegate,CirCleViewDelegate,UI
             account = textField.text
         
         }
-        
-        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

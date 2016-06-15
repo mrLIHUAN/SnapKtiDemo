@@ -71,8 +71,7 @@ class SortViewController: UIViewController {
             
             let _ : Person!
             for people1 in endarr{
-
-
+                
                 print(people1.name1,people1.age)
             
             }
@@ -109,6 +108,9 @@ class SortViewController: UIViewController {
 //        SortEnd(endarr: array)
 //    }
 
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -126,3 +128,4 @@ class SortViewController: UIViewController {
     */
 
 }
+

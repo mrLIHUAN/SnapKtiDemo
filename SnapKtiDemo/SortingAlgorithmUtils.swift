@@ -16,7 +16,6 @@ enum SortType{
 
 class SortingAlgorithmUtils: NSObject {
     
-    
     /**
      - parameter array:     将要排序的数组【对象】
      - parameter Sort:      对象中的某个属性
@@ -127,12 +126,9 @@ class SortingAlgorithmUtils: NSObject {
                         arr[j] = arr[j - 1]
                         
                         j--
-                    
                     }
                     arr[j] = temp
-
                 }
-                
             }
         }
         
@@ -163,7 +159,16 @@ class SortingAlgorithmUtils: NSObject {
         
         SortEnd(endarr: arr)
     }
+}
+
+func == (lhs : Person , rhs : Person) ->Bool{
     
+    if lhs.age == rhs.age {
+        
+        return true
+    }
+    
+    return false
     
     
 }

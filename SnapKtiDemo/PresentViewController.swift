@@ -13,21 +13,25 @@ class PresentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let btn = UIButton(frame: CGRectMake(0, 0, 50, 30))
-        btn.setTitle("返回", forState: UIControlState.Normal)
-        btn.addTarget(self, action: "goBack", forControlEvents: UIControlEvents.TouchUpInside)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
-        
+//        let btn = UIButton(frame: CGRectMake(0, 0, 50, 30))
+//        btn.setTitle("返回", forState: UIControlState.Normal)
+//        btn.addTarget(self, action: "goBack", forControlEvents: UIControlEvents.TouchUpInside)
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: btn)
+//        
         self.view.backgroundColor = UIColor.whiteColor()
+//
+//        bezierDrawCircle()
+//        
+//        bezierDrawCurves()
+//        
+//
+//        let view1 = RYCuteView(frame: CGRectMake(0,0 , self.view.frame.size.width, 600))
+//        self.view .addSubview(view1)
+//        
         
-        bezierDrawCircle()
-        
-        bezierDrawCurves()
-        
-
-        let view1 = RYCuteView(frame: CGRectMake(0,0 , self.view.frame.size.width, 600))
-        self.view .addSubview(view1)
-        
+        let cn = CNCircleProgressView(frame: CGRectMake(100, 100, 200, 200))
+        cn.updateProgressWithNumber(10)
+        self.view.addSubview(cn)
         
         
 //        self.navigationController?.navigationBar.tintColor = UIColor.redColor()

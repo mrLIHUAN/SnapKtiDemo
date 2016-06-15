@@ -95,15 +95,15 @@ class DownLoadViewController: UIViewController,NSURLConnectionDataDelegate,NSURL
         
         let url = NSURL(string: "https://github.com/mrLIHUAN/JSAndSwift/archive/master.zip")
         
-//        let request = NSURLRequest(URL: url!)
-//
-//        NSURLConnection(request: request, delegate: self)
+        let request = NSURLRequest(URL: url!)
+
+        NSURLConnection(request: request, delegate: self)
 //        //创建文件路径
 //        NSFileManager .defaultManager().createFileAtPath(filePath, contents: nil, attributes: nil)
         
-      downloadTask = session.downloadTaskWithURL(url!)
-        
-        downloadTask.resume()
+//      downloadTask = session.downloadTaskWithURL(url!)
+//        
+//        downloadTask.resume()
     
     }
     
@@ -131,6 +131,10 @@ class DownLoadViewController: UIViewController,NSURLConnectionDataDelegate,NSURL
         let progess = receviewTotal / totalLength
         
         label.text = String(format: "%0.2f%%", progess*100)
+
+        let cn = CNCircleProgressView(frame: CGRectMake(100, 100, 200, 200))
+        cn.updateProgressWithNumber(CGFloat(progess*100))
+        self.view.addSubview(cn)
 
         if(bufferData!.length > 1 * 1000){
             appenFileData(bufferData!)
